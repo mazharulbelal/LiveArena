@@ -237,7 +237,7 @@ class ViewController: UIViewController {
     
     @objc func OnAlreadyBookButtonClicked(){
         
-        let newViewController = LoginViewController()
+        let newViewController = CreateAccountViewController()
         self.navigationController?.pushViewController(newViewController, animated: true)
         
     }
