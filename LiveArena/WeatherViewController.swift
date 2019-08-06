@@ -8,61 +8,41 @@
 
 import UIKit
 
-class WeatherViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class WeatherViewController: UITableViewController {
+        
+    let cellId = "cellId"
     
-    
-    var myArray = ["First", "Secound","Third"]
-    var myTableView: UITableView!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        
-        let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
-        let displayWidth: CGFloat = self.view.frame.width
-        let displayHeight: CGFloat = self.view.frame.height
-        
-        myTableView = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - barHeight))
-        myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        myTableView.dataSource = self
-        myTableView.delegate = self
-        self.view.addSubview(myTableView)
-        
-        
-        
-        
-        
-        
-        
-        
-
-    print("Weather")
-        
-        
+        setupTableView()
     }
     
-   
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-       return myArray.count
-    }
-    
-    
-    
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath)
-        
-        cell.textLabel!.text = myArray[indexPath.row]
-        return cell
+    func setupTableView(){
+        //Registers a class for use in creating new table cells.
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
         
     }
-    
-
-
 }
+
+
+extension WeatherViewController {
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        cell.textLabel?.text = "Hello, World"
+        
+        return cell
+    }
+}
+
