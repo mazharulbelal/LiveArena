@@ -15,6 +15,7 @@
 		1D49305A22F899C300EAB70F /* LiveArenaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D49305922F899C300EAB70F /* LiveArenaTests.swift */; };
 		1D49306522F899C300EAB70F /* LiveArenaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D49306422F899C300EAB70F /* LiveArenaUITests.swift */; };
 		1D49307722F8A41900EAB70F /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D49307622F8A41900EAB70F /* CreateAccountViewController.swift */; };
+		1DA262EB22F9F09100837B81 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA262EA22F9F09100837B81 /* WeatherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		1D49306422F899C300EAB70F /* LiveArenaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveArenaUITests.swift; sourceTree = "<group>"; };
 		1D49306622F899C300EAB70F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D49307622F8A41900EAB70F /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		1DA262EA22F9F09100837B81 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				1D49304422F899BB00EAB70F /* AppDelegate.swift */,
 				1D49307622F8A41900EAB70F /* CreateAccountViewController.swift */,
+				1DA262EA22F9F09100837B81 /* WeatherViewController.swift */,
 				1D49304622F899BB00EAB70F /* ViewController.swift */,
 				1D49304822F899BB00EAB70F /* Main.storyboard */,
 				1D49304B22F899C300EAB70F /* Assets.xcassets */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D49307722F8A41900EAB70F /* CreateAccountViewController.swift in Sources */,
+				1DA262EB22F9F09100837B81 /* WeatherViewController.swift in Sources */,
 				1D49304722F899BB00EAB70F /* ViewController.swift in Sources */,
 				1D49304522F899BB00EAB70F /* AppDelegate.swift in Sources */,
 			);

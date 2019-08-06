@@ -246,6 +246,9 @@ class ViewController: UIViewController {
     @objc func OnSkipButtonClicked (){
         
         print("Skip Button")
+        
+        let WeatherController = WeatherViewController()
+            self.navigationController?.pushViewController(WeatherController, animated: true)
     }
     
     
