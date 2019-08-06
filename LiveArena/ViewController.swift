@@ -247,8 +247,8 @@ class ViewController: UIViewController {
         
         print("Skip Button")
         
-        let WeatherController = WeatherViewController()
-            self.navigationController?.pushViewController(WeatherController, animated: true)
+        present(TabBar(), animated: true, completion: nil)
+        
     }
     
     
