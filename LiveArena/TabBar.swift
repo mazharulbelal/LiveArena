@@ -56,7 +56,8 @@ class TabBar: UITableViewController {
         
         
         
-        self.tabBarCnt.tabBar.backgroundColor = UIColor.red
+        self.tabBarCnt.tabBar.backgroundColor = UIColor.gray
+        self.tabBarCnt.tabBar.tintColor = UIColor.red
         self.view.addSubview(tabBarCnt.view)
     }
 

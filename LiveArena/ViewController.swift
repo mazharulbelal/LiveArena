@@ -255,6 +255,29 @@ class ViewController: UIViewController {
     @objc func OnHelpButtonClicked(){
         print("Help Button")
         
+        
+    
+        let optionMenu = UIAlertController(title: nil, message: "Get help", preferredStyle: .actionSheet)
+        
+        
+        let EmailForgetAction = UIAlertAction(title: "Forget Your Email ID?", style: .default)
+        let PasswordForgetAction = UIAlertAction(title: "Forget Your Password?", style: .default)
+         let ContactUSaction = UIAlertAction(title: "Contact Us", style: .default)
+        
+        
+        let cancelAction = UIAlertAction(title: "Dismisse ", style: .cancel)
+        
+        
+        optionMenu.addAction(EmailForgetAction)
+        optionMenu.addAction(PasswordForgetAction)
+        optionMenu.addAction(ContactUSaction)
+        
+        
+        optionMenu.addAction(cancelAction)
+        
+        
+        self.present(optionMenu, animated: true, completion: nil)
+        
     }
     
     
