@@ -40,5 +40,13 @@ extension WeatherViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        print("Select Row")
+        
+        let DW = DetailsWeather()
+        self.navigationController?.pushViewController(DW, animated: true)
+    }
 }
 

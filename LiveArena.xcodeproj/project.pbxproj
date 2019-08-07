@@ -19,6 +19,7 @@
 		1DA262ED22FA02C300837B81 /* MP3TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA262EC22FA02C300837B81 /* MP3TableViewController.swift */; };
 		1DA262EF22FA054E00837B81 /* RadioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA262EE22FA054E00837B81 /* RadioController.swift */; };
 		1DA262F122FA072200837B81 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA262F022FA072200837B81 /* TabBar.swift */; };
+		1DFE1EB022FA66110099EEF1 /* DetailsWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFE1EAF22FA66110099EEF1 /* DetailsWeather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		1DA262EC22FA02C300837B81 /* MP3TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MP3TableViewController.swift; sourceTree = "<group>"; };
 		1DA262EE22FA054E00837B81 /* RadioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioController.swift; sourceTree = "<group>"; };
 		1DA262F022FA072200837B81 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		1DFE1EAF22FA66110099EEF1 /* DetailsWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsWeather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				1DA262EC22FA02C300837B81 /* MP3TableViewController.swift */,
 				1DA262EE22FA054E00837B81 /* RadioController.swift */,
 				1DA262F022FA072200837B81 /* TabBar.swift */,
+				1DFE1EAF22FA66110099EEF1 /* DetailsWeather.swift */,
 				1DA262EA22F9F09100837B81 /* WeatherViewController.swift */,
 				1D49304622F899BB00EAB70F /* ViewController.swift */,
 				1D49304822F899BB00EAB70F /* Main.storyboard */,
@@ -276,6 +279,7 @@
 				1DA262EB22F9F09100837B81 /* WeatherViewController.swift in Sources */,
 				1D49304722F899BB00EAB70F /* ViewController.swift in Sources */,
 				1D49304522F899BB00EAB70F /* AppDelegate.swift in Sources */,
+				1DFE1EB022FA66110099EEF1 /* DetailsWeather.swift in Sources */,
 				1DA262EF22FA054E00837B81 /* RadioController.swift in Sources */,
 				1DA262F122FA072200837B81 /* TabBar.swift in Sources */,
 			);

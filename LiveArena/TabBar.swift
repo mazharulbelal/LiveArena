@@ -23,6 +23,7 @@ class TabBar: UITableViewController {
         
         self.title = "TabBar"
        createTabBarController()
+        
 
 
     }
@@ -31,22 +32,20 @@ class TabBar: UITableViewController {
     func createTabBarController() {
         
         let firstVc = WeatherViewController()
-            firstVc.title = "First"
+            firstVc.title = "Weather"
             firstVc.tabBarItem = UITabBarItem.init(title: "Weather", image: UIImage(named: "Weather"), tag: 0)
         
         
         
         let secondVc = MP3TableViewController()
-            secondVc.title = "Second"
-        
-        secondVc.tabBarItem = UITabBarItem.init(title: "MP3", image: UIImage(named: "MP3"), tag: 1)
+            secondVc.title = "MP3 Player"
+            secondVc.tabBarItem = UITabBarItem.init(title: "MP3", image: UIImage(named: "MP3"), tag: 1)
         
         
         
         
         let thirdVc = MP3TableViewController()
-            thirdVc.title = "Second"
-        
+            thirdVc.title = "Radio"
             thirdVc.tabBarItem = UITabBarItem.init(title: "Radio", image: UIImage(named: "Radio"), tag: 2)
         
         
@@ -55,6 +54,9 @@ class TabBar: UITableViewController {
         let controllerArray = [firstVc, secondVc, thirdVc]
         tabBarCnt.viewControllers = controllerArray.map{ UINavigationController.init(rootViewController: $0)}
         
+        
+        
+        self.tabBarCnt.tabBar.backgroundColor = UIColor.red
         self.view.addSubview(tabBarCnt.view)
     }
 

@@ -99,7 +99,7 @@ class ViewController: UIViewController {
     
     func LoginLogoStack(){
         
-        let image = UIImage(named: "social-button-4") as UIImage?
+        let image = UIImage(named: "Facebook") as UIImage?
         let FacebookButton = UIButton(type: UIButton.ButtonType.custom) as UIButton
         FacebookButton.setImage(image, for: .normal)
         FacebookButton.addTarget(self, action: #selector(OnFaceBookButtonClicked), for: .touchUpInside)
@@ -109,17 +109,17 @@ class ViewController: UIViewController {
         
         
         
-        let image2 = UIImage(named: "social-button-1") as UIImage?
+        let image2 = UIImage(named: "Twitter") as UIImage?
         let TwitterButton = UIButton(type:  UIButton.ButtonType.custom) as UIButton
         TwitterButton.setImage(image2, for: .normal)
-        FacebookButton.addTarget(self, action: #selector(OnTwitterButtonClicked), for: .touchUpInside)
+        TwitterButton.addTarget(self, action: #selector(OnTwitterButtonClicked), for: .touchUpInside)
         
         
         
         
         
         
-        let image3 = UIImage(named: "social-button-2") as UIImage?
+        let image3 = UIImage(named: "Google") as UIImage?
         let GoogleButton = UIButton(type: UIButton.ButtonType.custom) as UIButton
         GoogleButton.setImage(image3, for: .normal)
         GoogleButton.addTarget(self, action: #selector(OnGoogleButtonClicked), for: .touchUpInside)
