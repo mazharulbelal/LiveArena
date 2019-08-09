@@ -257,31 +257,63 @@ class ViewController: UIViewController {
         
         
     
-        let optionMenu = UIAlertController(title: nil, message: "Get help", preferredStyle: .actionSheet)
+        
+        let alert = UIAlertController(title: "Get Help",
+                                      message: "Please select one option to proceed",
+                                      preferredStyle: .actionSheet)
         
         
-        let EmailForgetAction = UIAlertAction(title: "Forget Your Email ID?", style: .default)
-        let PasswordForgetAction = UIAlertAction(title: "Forget Your Password?", style: .default)
-         let ContactUSaction = UIAlertAction(title: "Contact Us", style: .default)
+        
+        let EmailAction = UIAlertAction(title: "Forgot Your Email ID?",
+                                          style: .destructive) { (action) in
+                                            // Respond to user selection of the action
+                                            print("....")
+                                            
+        }
+         
+                                            
+        let PasswordAction = UIAlertAction(title: "Forgot Your Password?", style: .destructive) { (action) in
+                                            
+                                            
+                                            
+                                            
+        }
         
         
-        let cancelAction = UIAlertAction(title: "Dismisse ", style: .cancel)
+        let ContactAction = UIAlertAction(title: "Contact Us", style: .destructive) { (action) in
+            
+            
+            
+            
+        }
         
         
-        optionMenu.addAction(EmailForgetAction)
-        optionMenu.addAction(PasswordForgetAction)
-        optionMenu.addAction(ContactUSaction)
         
         
-        optionMenu.addAction(cancelAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel",
+                                         style: .cancel) { (action) in
+                                            // Respond to user selection of the action
+        }
         
         
-        self.present(optionMenu, animated: true, completion: nil)
+        alert.addAction(EmailAction)
+        alert.addAction(PasswordAction)
+        alert.addAction(ContactAction)
+        alert.addAction(cancelAction)
         
+                                            
+        
+        
+        self.present(alert, animated: true) {
+            // The alert was presented
+        }
+        
+        
+        
+        
+    
     }
-    
-    
-    
     
     
 }
