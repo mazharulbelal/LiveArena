@@ -274,7 +274,8 @@ class ViewController: UIViewController {
                                             
         let PasswordAction = UIAlertAction(title: "Forgot Your Password?", style: .destructive) { (action) in
                                             
-                                            
+                  let RecoveryView = Recovery_Account()
+                    self.navigationController?.pushViewController(RecoveryView, animated: true)
                                             
                                             
         }
