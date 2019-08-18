@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CreateAccountViewController: UIViewController {
 
@@ -126,12 +127,39 @@ class CreateAccountViewController: UIViewController {
 @objc func onCreateAccountButtonClicked()
     {
         print("Create Account")
-    
-    
+        
+        
+        //first take the email and password from the views
+        let email = "dadaaa@gmail.com"
+        let password = "Mykey2013"
+        
+        
+      
+        
+        Auth.auth().createUser(withEmail: email, password: password) {(user, error) in
+            if user != nil {
+                print("User Has SignUp")
+            }
+            if error != nil {
+               // print(":(",error)
+            }
+        }
+//        Auth.auth().signIn(withEmail: self.usernameTextField.text!, password: self.passwordTextField.text!) {(user, error) in
+//            if user != nil {
+//                print("User Has Sign In")
+//            }
+//            if error != nil {
+//                print(":(",error)
+//            }
+        
+        
+        
+        
+       
     }
     
+}
     
     
     
 
-}
