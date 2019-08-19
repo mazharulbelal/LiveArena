@@ -130,7 +130,7 @@ class CreateAccountViewController: UIViewController {
         
         
         //first take the email and password from the views
-        let email = "dadaaa@gmail.com"
+        let email = TextField().EmailTextField.text
         let password = "Mykey2013"
         
         
