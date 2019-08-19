@@ -10,6 +10,14 @@ import UIKit
 import Firebase
 
 class CreateAccountViewController: UIViewController {
+    
+    var EmailAddress:UITextField!
+    var FullName:UITextField!
+    var PasswordTextFleld:UITextField!
+    var PhoneTextFleld:UITextField!
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +62,7 @@ class CreateAccountViewController: UIViewController {
         
         // Full Name Field
         
-        let FullName = UITextField(frame: CGRect(x: 41, y: 232, width: 288, height: 46))
+        FullName = UITextField(frame: CGRect(x: 41, y: 232, width: 288, height: 46))
         
         FullName.placeholder = " Full Name"
         FullName.layer.borderWidth = 0.25
@@ -67,7 +75,7 @@ class CreateAccountViewController: UIViewController {
        
         // Email Text Field
         
-        let EmailAddress = UITextField(frame: CGRect(x: 41, y: 288, width: 288, height:46))
+        EmailAddress = UITextField(frame: CGRect(x: 41, y: 288, width: 288, height:46))
         
         EmailAddress.placeholder = " Email Address"
         EmailAddress.layer.borderWidth = 0.25
@@ -80,7 +88,7 @@ class CreateAccountViewController: UIViewController {
         
         // Password Text Field
         
-        let PasswordTextFleld = UITextField(frame: CGRect(x: 41, y: 344, width: 288, height: 46))
+        PasswordTextFleld = UITextField(frame: CGRect(x: 41, y: 344, width: 288, height: 46))
         
         PasswordTextFleld.placeholder = " Password"
         PasswordTextFleld.layer.borderWidth = 0.25
@@ -94,7 +102,7 @@ class CreateAccountViewController: UIViewController {
         // Phone Text Field
         
         
-        let PhoneTextFleld = UITextField(frame: CGRect(x: 41, y: 400, width: 288, height:46))
+        PhoneTextFleld = UITextField(frame: CGRect(x: 41, y: 400, width: 288, height:46))
         
         PhoneTextFleld.placeholder = " Phone"
         PhoneTextFleld.layer.borderWidth = 0.25
@@ -130,8 +138,8 @@ class CreateAccountViewController: UIViewController {
         
         
         //first take the email and password from the views
-        let email = TextField().EmailTextField.text
-        let password = "Mykey2013"
+        let email = EmailAddress.text!
+        let password = PasswordTextFleld.text!
         
         
       
