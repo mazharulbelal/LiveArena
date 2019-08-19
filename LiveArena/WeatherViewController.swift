@@ -9,17 +9,32 @@
 import UIKit
 
 class WeatherViewController: UITableViewController {
+    
+    
         
     let cellId = "cellId"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
         
+        
+        
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+        //navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target: self, action:#selector(addTapped))
+
+     
     }
-    
-    
+ 
+    @objc func addTapped(sender:UIButton) {
+        print(" pressed")
+    }
+
 }
+
+  
+
 
 
 extension WeatherViewController {
@@ -48,5 +63,8 @@ extension WeatherViewController {
         let DW = DetailsWeather()
         self.navigationController?.pushViewController(DW, animated: true)
     }
+    
+    
+    
 }
 
