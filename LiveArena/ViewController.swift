@@ -8,11 +8,13 @@
 
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
     
     
-    
+    var PasswordTextFleld: UITextField!
+    var EmailTextFleld: UITextField!
     
     
     
@@ -65,7 +67,7 @@ class ViewController: UIViewController {
     
     func LoginTextField () {
         
-        let EmailTextFleld = UITextField(frame: CGRect(x: 44, y: 264, width: 288, height: 46))
+        EmailTextFleld = UITextField(frame: CGRect(x: 44, y: 264, width: 288, height: 46))
         
         EmailTextFleld.placeholder = " Email or Phone"
         EmailTextFleld.layer.borderWidth = 0.25
@@ -79,7 +81,7 @@ class ViewController: UIViewController {
         // Password Text Field
         
         
-        let PasswordTextFleld = UITextField(frame: CGRect(x: 44, y: 320, width: 288, height:46))
+        PasswordTextFleld = UITextField(frame: CGRect(x: 44, y: 320, width: 288, height:46))
         
         PasswordTextFleld.placeholder = " Password"
         PasswordTextFleld.layer.borderWidth = 0.25
@@ -231,7 +233,45 @@ class ViewController: UIViewController {
     }
     
     @objc func onEmailButtonClicked () {
-        print("Email Button..")
+        
+        
+        
+
+             Auth.auth().signIn(withEmail: self.EmailTextFleld.text!, password: self.PasswordTextFleld.text!) {(user, error) in
+                 if user != nil {
+                    
+                    self.present(TabBar(), animated: true, completion: nil)
+                }
+             if error != nil {
+                
+                
+                let alertController = UIAlertController(title: "Opps!", message: "something went wrong", preferredStyle: .alert)
+                
+                let action1 = UIAlertAction(title: "Dismiss", style: .cancel) { (action:UIAlertAction) in
+                    
+                }
+                
+                
+                
+                
+                
+                alertController.addAction(action1)
+                
+                self.present(alertController, animated: true, completion: nil)
+                
+                
+                 print(":(",error)
+}
+        
+        
+        
+        
+        
+        }
+        
+        
+        
+        
         
     }
     

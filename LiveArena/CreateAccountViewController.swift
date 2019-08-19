@@ -146,7 +146,7 @@ class CreateAccountViewController: UIViewController {
                 let alertController = UIAlertController(title: "Create Sucessfully", message: "Your account has been successfully created. You can Login Now", preferredStyle: .alert)
                 
                 let action1 = UIAlertAction(title: "Press To Login", style: .default) { (action:UIAlertAction) in
-                    print("You've pressed default");
+                    print("...");
                 }
                 
               
@@ -169,21 +169,33 @@ class CreateAccountViewController: UIViewController {
                 
                 
             if error != nil {
-               // print(":(",error)
+               
+                
+                
+                let alertController = UIAlertController(title: "Opps!", message: "something went wrong", preferredStyle: .alert)
+                
+                let action1 = UIAlertAction(title: "Dismiss", style: .cancel) { (action:UIAlertAction) in
+                  
+                }
+                
+                
+                
+                
+                
+                alertController.addAction(action1)
+                
+                self.present(alertController, animated: true, completion: nil)
+                
+                
+                
             }
         }
-//        Auth.auth().signIn(withEmail: self.usernameTextField.text!, password: self.passwordTextField.text!) {(user, error) in
-//            if user != nil {
-//                print("User Has Sign In")
-//            }
-//            if error != nil {
-//                print(":(",error)
-//            }
-        
-        
-        
-        
-       
+//
+//
+//
+//
+//
+//
     }
     
 }
