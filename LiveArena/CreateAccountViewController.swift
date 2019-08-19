@@ -16,8 +16,6 @@ class CreateAccountViewController: UIViewController {
     var PasswordTextFleld:UITextField!
     var PhoneTextFleld:UITextField!
     
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,12 +30,7 @@ class CreateAccountViewController: UIViewController {
         TextField()
         CreateAccount()
         
-        
-        
-        
-        
-        
-        
+    
 
     }
     
@@ -146,8 +139,35 @@ class CreateAccountViewController: UIViewController {
         
         Auth.auth().createUser(withEmail: email, password: password) {(user, error) in
             if user != nil {
-                print("User Has SignUp")
+                
+
+                
+                
+                let alertController = UIAlertController(title: "Create Sucessfully", message: "Your account has been successfully created. You can Login Now", preferredStyle: .alert)
+                
+                let action1 = UIAlertAction(title: "Press To Login", style: .default) { (action:UIAlertAction) in
+                    print("You've pressed default");
+                }
+                
+              
+    
+                
+                
+                alertController.addAction(action1)
+               
+                self.present(alertController, animated: true, completion: nil)
+                
+                
+                
+                
+                
+                
+                
+                
+                
             }
+                
+                
             if error != nil {
                // print(":(",error)
             }
