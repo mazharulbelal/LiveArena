@@ -7,6 +7,9 @@ target 'LiveArena' do
 
 	pod 'Firebase/Analytics'
 	pod 'Firebase/Auth'
+	pod ‘Firebase/Core‘
+	pod ‘Firebase/Database‘
+	
 
   # Pods for LiveArena
 

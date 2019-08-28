@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TabBar: UITableViewController {
+class TabBar: UITabBarController {
     
     let First = WeatherViewController()
     let Secound = MP3TableViewController()

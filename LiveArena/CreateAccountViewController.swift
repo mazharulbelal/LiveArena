@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
+
 
 class CreateAccountViewController: UIViewController {
     
@@ -15,6 +17,10 @@ class CreateAccountViewController: UIViewController {
     var FullName:UITextField!
     var PasswordTextFleld:UITextField!
     var PhoneTextFleld:UITextField!
+    
+    
+    
+    
     
 
     override func viewDidLoad() {
@@ -130,6 +136,20 @@ class CreateAccountViewController: UIViewController {
         print("Create Account")
         
         
+        
+        var ref: DatabaseReference?
+        ref = Database.database().reference()
+        
+        let post : [ String : AnyObject] = ["Full Name" : FullName.text! as AnyObject ,"Email Address" : EmailAddress.text! as AnyObject, "Phone Number": PhoneTextFleld.text! as AnyObject ]
+        
+        
+        ref?.child("UserInformation").child(self.PhoneTextFleld.text!).setValue(post)
+        
+        
+        
+        
+        
+        
         //first take the email and password from the views
         let email = EmailAddress.text!
         let password = PasswordTextFleld.text!
@@ -158,9 +178,7 @@ class CreateAccountViewController: UIViewController {
                 self.present(alertController, animated: true, completion: nil)
                 
                 
-                
-                
-                
+          
                 
                 
                 
