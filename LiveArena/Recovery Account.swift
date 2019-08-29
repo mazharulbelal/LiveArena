@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class Recovery_Account: UIViewController {
+    
+    var InputTextFIeld:UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +20,7 @@ class Recovery_Account: UIViewController {
         self.title = "Recovery Account"
         
         RecoveryButton()
-        InputTextFIeld()
+        FuncInputTextFIeld()
         ForGotLabel()
         ImageView()
 
@@ -41,14 +45,17 @@ class Recovery_Account: UIViewController {
     
     // Input Text Field
     
-    func InputTextFIeld () {
+    func FuncInputTextFIeld () {
         
         
-        let InputTextFIeld = UITextField(frame: CGRect(x: 32, y: 388, width: 312, height: 55))
+            InputTextFIeld = UITextField(frame: CGRect(x: 32, y: 388, width: 312, height: 55))
             InputTextFIeld.placeholder = " Enter Your Email Address"
             InputTextFIeld.layer.cornerRadius = 8
             InputTextFIeld.layer.borderWidth = 1.0
             InputTextFIeld.layer.borderColor = UIColor.gray.cgColor
+            InputTextFIeld.autocorrectionType = .no
+            InputTextFIeld.autocapitalizationType = .none
+            InputTextFIeld.textAlignment = .center
         
         
             self.view.addSubview(InputTextFIeld)
@@ -58,6 +65,71 @@ class Recovery_Account: UIViewController {
     // Send Button Clicked
     
     @objc func OnSendButtonClicked() {
+        
+        Auth.auth().sendPasswordReset(withEmail: InputTextFIeld.text!, completion: {
+           
+                    error in
+                     if let error = error {
+                         print(error)           }
+                      else{
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        let alertController = UIAlertController(title: "Password Reset", message: "Your password reset link has been successfully!", preferredStyle: .alert)
+                        
+                        let action1 = UIAlertAction(title: "Press To Login", style: .default) { (action:UIAlertAction) in
+                            
+                            
+                            self.present(ViewController(), animated: true, completion: nil)
+                            
+                        }
+                        
+                        
+                        
+                        
+                        
+                        alertController.addAction(action1)
+                        
+                        self.present(alertController, animated: true, completion: nil)
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+         
+                   }
+               })
+        
+        
+        
+        
+        
+        
+        
         
         print("Send")
         
