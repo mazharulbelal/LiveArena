@@ -72,10 +72,13 @@ class ViewController: UIViewController {
         
         EmailTextFleld = UITextField(frame: CGRect(x: 44, y: 264, width: 288, height: 46))
         
-        EmailTextFleld.placeholder = " Email or Phone"
+        EmailTextFleld.placeholder = "Email or Phone"
         EmailTextFleld.layer.borderWidth = 0.25
         EmailTextFleld.layer.cornerRadius = 10
         EmailTextFleld.layer.borderColor = UIColor.gray.cgColor
+        EmailTextFleld.autocorrectionType = .no
+        EmailTextFleld.autocapitalizationType = .none
+        EmailTextFleld.textAlignment = .center
         self.view.addSubview(EmailTextFleld)
         
         
@@ -86,9 +89,13 @@ class ViewController: UIViewController {
         
         PasswordTextFleld = UITextField(frame: CGRect(x: 44, y: 320, width: 288, height:46))
         
-        PasswordTextFleld.placeholder = " Password"
+        PasswordTextFleld.placeholder = "Password"
         PasswordTextFleld.layer.borderWidth = 0.25
         PasswordTextFleld.layer.cornerRadius = 10
+        PasswordTextFleld.autocorrectionType = .no
+        PasswordTextFleld.autocapitalizationType = .none
+        PasswordTextFleld.textAlignment = .center
+        PasswordTextFleld.isSecureTextEntry = true
         PasswordTextFleld.layer.borderColor = UIColor.gray.cgColor
         self.view.addSubview(PasswordTextFleld)
         
@@ -165,6 +172,7 @@ class ViewController: UIViewController {
         EmailButton.setTitle("Login", for: .normal)
         EmailButton.tintColor = UIColor.white
         EmailButton.addTarget(self, action: #selector(onEmailButtonClicked), for: .touchUpInside)
+        
         self.view.addSubview(EmailButton)
         
         
