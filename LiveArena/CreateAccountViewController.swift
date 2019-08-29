@@ -198,7 +198,10 @@ class CreateAccountViewController: UIViewController {
                 let alertController = UIAlertController(title: "Create Sucessfully", message: "Your account has been successfully created. You can Login Now", preferredStyle: .alert)
                 
                 let action1 = UIAlertAction(title: "Press To Login", style: .default) { (action:UIAlertAction) in
-                    print("...");
+                   
+                    
+                    self.present(ViewController(), animated: true, completion: nil)
+                    
                 }
                 
               

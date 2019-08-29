@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class WeatherViewController: UITableViewController {
     
@@ -21,14 +22,28 @@ class WeatherViewController: UITableViewController {
         
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
-        //navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target: self, action:#selector(addTapped))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(OnLogOutButtonClicked))
 
      
     }
  
     @objc func addTapped(sender:UIButton) {
-        print(" pressed")
+        print("pressed")
+    }
+    
+    @objc func OnLogOutButtonClicked() {
+        
+        print("Logout")
+        self.present(ViewController(), animated: true, completion: nil)
+        
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print (signOutError)
+        }
+        
     }
 
 }
