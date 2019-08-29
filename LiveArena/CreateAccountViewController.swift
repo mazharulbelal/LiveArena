@@ -96,7 +96,7 @@ class CreateAccountViewController: UIViewController {
         
       
         EyeButton = UIButton(type: UIButton.ButtonType.custom) as UIButton
-        EyeButton.frame = CGRect(x: 280, y: 344, width: 40, height: 40)
+        EyeButton.frame = CGRect(x: 280, y: 352, width: 25, height: 25)
         EyeButton.setImage(EyeOFF, for: .normal)
         EyeButton.addTarget(self, action: #selector(OnEyeButtonButtonClicked), for: .touchUpInside)
       //  self.view.addSubview(EyeButton)
