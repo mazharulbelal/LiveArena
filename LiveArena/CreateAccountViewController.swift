@@ -136,14 +136,16 @@ class CreateAccountViewController: UIViewController {
         print("Create Account")
         
         
+        // User Regiestration
         
         var ref: DatabaseReference?
         ref = Database.database().reference()
-        
         let post : [ String : AnyObject] = ["Full Name" : FullName.text! as AnyObject ,"Email Address" : EmailAddress.text! as AnyObject, "Phone Number": PhoneTextFleld.text! as AnyObject ]
         
         
         ref?.child("UserInformation").child(self.PhoneTextFleld.text!).setValue(post)
+        
+        
         
         
         
