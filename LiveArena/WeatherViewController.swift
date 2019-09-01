@@ -30,6 +30,8 @@ class WeatherViewController: UITableViewController {
  
     @objc func addTapped(sender:UIButton) {
         print("pressed")
+        
+        present(SideMenu(), animated: true, completion: nil)
     }
     
     @objc func OnLogOutButtonClicked() {

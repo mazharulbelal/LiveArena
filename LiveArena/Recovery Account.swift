@@ -80,7 +80,7 @@ class Recovery_Account: UIViewController {
                         
                         
                         
-                        let alertController = UIAlertController(title: "Password Reset", message: "Your password reset link has been successfully!", preferredStyle: .alert)
+                        let alertController = UIAlertController(title: "Password Reset", message: "Your password reset link  has been successfully!", preferredStyle: .alert)
                         
                         let action1 = UIAlertAction(title: "Press To Login", style: .default) { (action:UIAlertAction) in
                             
