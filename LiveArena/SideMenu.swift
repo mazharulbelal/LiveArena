@@ -23,6 +23,9 @@ class SideMenu: UITableViewController {
         super.viewDidLoad()
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+        
+       
+        
        
         
         
@@ -63,7 +66,21 @@ extension SideMenu {
         
         print()
         
-        self.dismiss(animated: true, completion: nil)
+        
+        
+        
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromRight
+        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+        view.window!.layer.add(transition, forKey: kCATransition)
+        self.dismiss(animated: false, completion: nil)
+        
+        
+        
+        
+        
     }
     
     
