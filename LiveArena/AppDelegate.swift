@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             // ViewController Add Programmly
             window = UIWindow(frame: UIScreen.main.bounds)
+        
             window?.rootViewController = UINavigationController(rootViewController:ViewController())
             window?.makeKeyAndVisible()
         

@@ -49,9 +49,14 @@ class TabBar: UITabBarController {
             thirdVc.tabBarItem = UITabBarItem.init(title: "Radio", image: UIImage(named: "Radio"), tag: 2)
         
         
+        let FourdVc = SideMenu()
+        FourdVc.title = "More"
+        FourdVc.tabBarItem = UITabBarItem.init(title: "More", image: UIImage(named: "menu"), tag: 3)
         
         
-        let controllerArray = [firstVc, secondVc, thirdVc]
+        
+        
+        let controllerArray = [firstVc, secondVc, thirdVc, FourdVc]
         tabBarCnt.viewControllers = controllerArray.map{ UINavigationController.init(rootViewController: $0)}
         
         

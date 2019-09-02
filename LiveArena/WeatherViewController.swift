@@ -22,29 +22,11 @@ class WeatherViewController: UITableViewController {
         
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target: self, action:#selector(addTapped))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(OnLogOutButtonClicked))
-
+        
      
     }
  
-    @objc func addTapped(sender:UIButton) {
-        print("pressed")
-        
-        
-        
-        
-        let transition = CATransition()
-        transition.duration = 0.5
-        transition.type = CATransitionType.push
-        transition.subtype = CATransitionSubtype.fromLeft
-        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
-        view.window!.layer.add(transition, forKey: kCATransition)
-        present(SideMenu(), animated: false, completion: nil)
-       
-        
-        
-    }
+    
     
     @objc func OnLogOutButtonClicked() {
         

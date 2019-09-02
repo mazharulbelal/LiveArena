@@ -12,7 +12,7 @@ import Firebase
 class SideMenu: UITableViewController {
     
     
-    var MenuName = ["Profile Picture","Name","Locations","Favorite List","Change Password","Theme","Language", "Contact","Logoout"]
+    var MenuName = ["Profile Picture","Name","Locations","Favorite List","Change Password","Theme","Language", "Contact","Logout"]
 
     
     
@@ -24,8 +24,9 @@ class SideMenu: UITableViewController {
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
         
-       
         
+        
+    
        
         
         
@@ -58,6 +59,7 @@ extension SideMenu {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         cell.textLabel?.text = MenuName[indexPath.row]
+        cell.textLabel?.textAlignment = .center
         
         return cell
     }
@@ -66,16 +68,8 @@ extension SideMenu {
         
         print()
         
-        
-        
-        
-        let transition = CATransition()
-        transition.duration = 0.5
-        transition.type = CATransitionType.push
-        transition.subtype = CATransitionSubtype.fromRight
-        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
-        view.window!.layer.add(transition, forKey: kCATransition)
-        self.dismiss(animated: false, completion: nil)
+    
+       
         
         
         
