@@ -9,81 +9,73 @@
 import UIKit
 import Firebase
 
-class SideMenu: UITableViewController {
+class SideMenu: UIViewController {
+    
+    var ProfileImageView : UIImageView!
+    var ListTavleView :UITableView!
+    var NameLabel: UILabel!
+    var LocationLabel: UILabel!
+    var ProfileImage : UIImage!
+    
+    var MenuName = ["Change Profile Picture","Locations","Favorite List","Change Password", "Contact","Logout"]
     
     
-    var MenuName = ["Profile Picture","Name","Locations","Favorite List","Change Password","Theme","Language", "Contact","Logout"]
+    
+    
+
+   override func viewDidLoad() {
+        super.viewDidLoad()
+    self.view.backgroundColor = UIColor.white
+    
+    
+    
+    Design()
+    
+        
 
     
-    
-    
-    let cellId = "cellId"
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+        
+    }
+    
+    func Design () {
         
         
         
-    
-       
+        
+        let ProfileImageView = UIImageView(frame: CGRect(x: 116, y: 85, width: 150, height: 150))
+        ProfileImageView.image = UIImage(named: "steve")
+        ProfileImageView.layer.cornerRadius = 75
+        ProfileImageView.clipsToBounds = true
+        ProfileImageView.layer.borderWidth = 3
+        ProfileImageView.layer.borderColor = UIColor.red.cgColor
+        ProfileImageView.layer.borderColor = UIColor.white.cgColor
+        self.view.addSubview(ProfileImageView)
+        
+        
+        
+        
+        let bounds = UIScreen.main.bounds
+        ListTavleView = UITableView(frame: CGRect(x: 0, y: 300, width:bounds.size.width, height: bounds.size.height))
+        self.view.addSubview(ListTavleView)
+        
+//
+//        NameLabel = UILabel(frame: CGRect(x: <#T##Int#>, y: <#T##Int#>, width: <#T##Int#>, height: <#T##Int#>))
+//        NameLabel.text = "Belal"
+//        NameLabel.textAlignment = .center
+        
+        
         
         
         
     }
+       
+        
+        
+        
+}
     
     
     
     
   
-    
-}
-
-
-
-
-
-extension SideMenu {
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return MenuName.count
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        cell.textLabel?.text = MenuName[indexPath.row]
-        cell.textLabel?.textAlignment = .center
-        
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        print()
-        
-    
-       
-        
-        
-        
-        
-        
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-}
-
-

@@ -9,6 +9,8 @@ target 'LiveArena' do
 	pod 'Firebase/Auth'
 	pod ‘Firebase/Core‘
 	pod ‘Firebase/Database‘
+	pod 'lottie-ios'
+	
 	
 
   # Pods for LiveArena
