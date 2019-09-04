@@ -43,16 +43,13 @@ class SideMenu: UIViewController {
         let ProfileImage = UIImageView(frame: CGRect(x: 116, y: 85, width: 150, height: 150))
        
         
+       ProfileImageView = UIImageView(frame: CGRect(x: 50, y: 80, width: 150, height: 150))
         ProfileImage.image = UIImage(named: "steve")
-        ProfileImage.layer.cornerRadius = 75
-        
-        
-        
-        
-        ProfileImageView.image = UIImage(named: ProfileImage)
-        ProfileImageView.layer.cornerRadius = 75
-        ProfileImageView.contentMode = UIView.ContentMode.scaleAspectFit
-        ProfileImageView.backgroundColor = UIColor.red
+        ProfileImageView.layer.borderWidth = 1
+        ProfileImageView.layer.masksToBounds = false
+        ProfileImageView.layer.borderColor = UIColor.black.cgColor
+        ProfileImageView.layer.cornerRadius = ProfileImageView.frame.height/2
+        ProfileImageView.clipsToBounds = true
         self.view.addSubview(ProfileImage)
         
         
