@@ -23,6 +23,8 @@ class WeatherViewController: UITableViewController {
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
         
+        print("")
+        
      
     }
  
