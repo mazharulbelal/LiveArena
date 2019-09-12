@@ -17,12 +17,13 @@
 		1D49306522F899C300EAB70F /* LiveArenaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D49306422F899C300EAB70F /* LiveArenaUITests.swift */; };
 		1D49307722F8A41900EAB70F /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D49307622F8A41900EAB70F /* CreateAccountViewController.swift */; };
 		1D764E1C231BBB78003AD6FE /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D764E1B231BBB78003AD6FE /* SideMenu.swift */; };
-		1DA262EB22F9F09100837B81 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA262EA22F9F09100837B81 /* WeatherViewController.swift */; };
 		1DA262ED22FA02C300837B81 /* MP3TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA262EC22FA02C300837B81 /* MP3TableViewController.swift */; };
 		1DA262EF22FA054E00837B81 /* RadioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA262EE22FA054E00837B81 /* RadioController.swift */; };
 		1DA262F122FA072200837B81 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA262F022FA072200837B81 /* TabBar.swift */; };
-		1DCC65F923224789002E3194 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC65F823224789002E3194 /* DataProvider.swift */; };
-		1DCC65FB232247B8002E3194 /* InformationCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC65FA232247B8002E3194 /* InformationCategory.swift */; };
+		1DA617E3232A6D85002C6B50 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA617E2232A6D84002C6B50 /* WeatherViewController.swift */; };
+		1DA617E7232A6DAC002C6B50 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA617E4232A6DAB002C6B50 /* WeatherCell.swift */; };
+		1DA617E8232A6DAC002C6B50 /* WeatherCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA617E5232A6DAC002C6B50 /* WeatherCategory.swift */; };
+		1DA617E9232A6DAC002C6B50 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA617E6232A6DAC002C6B50 /* WeatherData.swift */; };
 		1DE42F1622FD642500BDB609 /* Recovery Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE42F1522FD642500BDB609 /* Recovery Account.swift */; };
 		1DFE1EB022FA66110099EEF1 /* DetailsWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFE1EAF22FA66110099EEF1 /* DetailsWeather.swift */; };
 		403826F4490285CC3DD28895 /* Pods_LiveArenaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0B72967812CC9B4058FC34 /* Pods_LiveArenaUITests.framework */; };
@@ -66,12 +67,13 @@
 		1D49306622F899C300EAB70F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D49307622F8A41900EAB70F /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		1D764E1B231BBB78003AD6FE /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
-		1DA262EA22F9F09100837B81 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		1DA262EC22FA02C300837B81 /* MP3TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MP3TableViewController.swift; sourceTree = "<group>"; };
 		1DA262EE22FA054E00837B81 /* RadioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioController.swift; sourceTree = "<group>"; };
 		1DA262F022FA072200837B81 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
-		1DCC65F823224789002E3194 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
-		1DCC65FA232247B8002E3194 /* InformationCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCategory.swift; sourceTree = "<group>"; };
+		1DA617E2232A6D84002C6B50 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeatherViewController.swift; path = /Users/belal/Documents/LiveArena/LiveArena/Controller/WeatherViewController.swift; sourceTree = "<absolute>"; };
+		1DA617E4232A6DAB002C6B50 /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		1DA617E5232A6DAC002C6B50 /* WeatherCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCategory.swift; sourceTree = "<group>"; };
+		1DA617E6232A6DAC002C6B50 /* WeatherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		1DE42F1522FD642500BDB609 /* Recovery Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recovery Account.swift"; sourceTree = "<group>"; };
 		1DFE1EAF22FA66110099EEF1 /* DetailsWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsWeather.swift; sourceTree = "<group>"; };
 		95A377696B8525A40315FF36 /* Pods-LiveArena.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveArena.debug.xcconfig"; path = "Target Support Files/Pods-LiveArena/Pods-LiveArena.debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,11 +141,11 @@
 				1D49304422F899BB00EAB70F /* AppDelegate.swift */,
 				1DCC65F7232246DE002E3194 /* Controller */,
 				1D49304822F899BB00EAB70F /* Main.storyboard */,
+				1DA617D2232A3BD1002C6B50 /* Cell */,
 				1D49304B22F899C300EAB70F /* Assets.xcassets */,
 				1D49304D22F899C300EAB70F /* LaunchScreen.storyboard */,
 				1D49305022F899C300EAB70F /* Info.plist */,
 				1D073458230951400086E570 /* GoogleService-Info.plist */,
-				1DCC65FC232247C5002E3194 /* Models */,
 			);
 			path = LiveArena;
 			sourceTree = "<group>";
@@ -166,29 +168,38 @@
 			path = LiveArenaUITests;
 			sourceTree = "<group>";
 		};
+		1DA617D2232A3BD1002C6B50 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1DA617E4232A6DAB002C6B50 /* WeatherCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		1DB06889232AA9A800744F2C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1DA617E6232A6DAC002C6B50 /* WeatherData.swift */,
+				1DA617E5232A6DAC002C6B50 /* WeatherCategory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1DCC65F7232246DE002E3194 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1DA617E2232A6D84002C6B50 /* WeatherViewController.swift */,
 				1D49307622F8A41900EAB70F /* CreateAccountViewController.swift */,
 				1DA262EC22FA02C300837B81 /* MP3TableViewController.swift */,
 				1DA262EE22FA054E00837B81 /* RadioController.swift */,
 				1DA262F022FA072200837B81 /* TabBar.swift */,
 				1DFE1EAF22FA66110099EEF1 /* DetailsWeather.swift */,
-				1DA262EA22F9F09100837B81 /* WeatherViewController.swift */,
 				1D764E1B231BBB78003AD6FE /* SideMenu.swift */,
 				1D49304622F899BB00EAB70F /* ViewController.swift */,
 				1DE42F1522FD642500BDB609 /* Recovery Account.swift */,
+				1DB06889232AA9A800744F2C /* Model */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		1DCC65FC232247C5002E3194 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				1DCC65F823224789002E3194 /* DataProvider.swift */,
-				1DCC65FA232247B8002E3194 /* InformationCategory.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		3E709FE3DEC2FE949F73C5F3 /* Frameworks */ = {
@@ -447,13 +458,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DCC65FB232247B8002E3194 /* InformationCategory.swift in Sources */,
+				1DA617E7232A6DAC002C6B50 /* WeatherCell.swift in Sources */,
+				1DA617E3232A6D85002C6B50 /* WeatherViewController.swift in Sources */,
 				1D49307722F8A41900EAB70F /* CreateAccountViewController.swift in Sources */,
 				1DA262ED22FA02C300837B81 /* MP3TableViewController.swift in Sources */,
-				1DA262EB22F9F09100837B81 /* WeatherViewController.swift in Sources */,
 				1D49304722F899BB00EAB70F /* ViewController.swift in Sources */,
+				1DA617E8232A6DAC002C6B50 /* WeatherCategory.swift in Sources */,
 				1D49304522F899BB00EAB70F /* AppDelegate.swift in Sources */,
-				1DCC65F923224789002E3194 /* DataProvider.swift in Sources */,
+				1DA617E9232A6DAC002C6B50 /* WeatherData.swift in Sources */,
 				1DFE1EB022FA66110099EEF1 /* DetailsWeather.swift in Sources */,
 				1DE42F1622FD642500BDB609 /* Recovery Account.swift in Sources */,
 				1D764E1C231BBB78003AD6FE /* SideMenu.swift in Sources */,

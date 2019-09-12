@@ -1,83 +1,67 @@
 //
 //  WeatherViewController.swift
-//  LiveArena
+//  
 //
-//  Created by Mazharul Belal on 6/8/19.
-//  Copyright © 2019 Mazharul Belal. All rights reserved.
+//  Created by Mazharul Belal on 9/12/19.
 //
 
+import Foundation
 import UIKit
-import Firebase
 
-class WeatherViewController: UITableViewController {
+class WeatherViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    let CastData = WeatherData.getWeatherData()
+    let contactsTableView = UITableView()
     
     
-        
-    let cellId = "cellId"
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+         navigationItem.title = "Weather"
+        view.backgroundColor = .white
+        view.addSubview(contactsTableView)
+        
+        contactsTableView.translatesAutoresizingMaskIntoConstraints = false
+        contactsTableView.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor).isActive = true
+        contactsTableView.leftAnchor.constraint(equalTo:view.safeAreaLayoutGuide.leftAnchor).isActive = true
+        contactsTableView.rightAnchor.constraint(equalTo:view.safeAreaLayoutGuide.rightAnchor).isActive = true
+        contactsTableView.bottomAnchor.constraint(equalTo:view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         
         
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+        contactsTableView.dataSource = self
+        contactsTableView.delegate = self
+        contactsTableView.register(WeatherCell.self, forCellReuseIdentifier: "WeatherCell")
         
-        print("")
         
-     
-    }
- 
-    
-    
-    @objc func OnLogOutButtonClicked() {
         
-        print("Logout")
-        self.present(ViewController(), animated: true, completion: nil)
         
-        let firebaseAuth = Auth.auth()
-        do {
-            try firebaseAuth.signOut()
-        } catch let signOutError as NSError {
-            print (signOutError)
-        }
-        
-    }
-
-}
-
-  
-
-
-
-extension WeatherViewController {
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+       
     }
     
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return CastData.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        cell.textLabel?.text = "Hello, World"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherCell", for: indexPath) as! WeatherCell
+        
+        
+        cell.contact = CastData[indexPath.row]
         
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        print("Select Row")
-        
-        let DW = DetailsWeather()
-        self.navigationController?.pushViewController(DW, animated: true)
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
     }
     
     
     
 }
-
