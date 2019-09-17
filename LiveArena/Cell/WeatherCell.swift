@@ -8,6 +8,11 @@ class WeatherCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        addSubview(CellView)
+        addSubview(imageView)
+        addSubview(textLabel)
+        
         AutoLayout()
     }
     
@@ -16,7 +21,7 @@ class WeatherCell: UICollectionViewCell {
         image.translatesAutoresizingMaskIntoConstraints = false
         image.contentMode = .scaleAspectFill
         image.clipsToBounds = true
-        image.layer.cornerRadius = 10
+        image.layer.cornerRadius = 5
         image.backgroundColor = UIColor.gray
         return image
     }()
@@ -32,6 +37,16 @@ class WeatherCell: UICollectionViewCell {
     }()
     
     
+    let CellView : UIView = {
+        let cellView = UIView()
+        cellView.backgroundColor = UIColor.white
+        cellView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return cellView
+        
+    }()
+    
+    
    
     
     required init?(coder aDecoder: NSCoder) {
@@ -42,13 +57,17 @@ class WeatherCell: UICollectionViewCell {
     
     
     func  AutoLayout(){
-        addSubview(imageView)
-        addSubview(textLabel)
         
-        imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        imageView.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        
+        CellView.leftAnchor.constraint(equalTo:self.leftAnchor, constant: 0).isActive = true
+        CellView.rightAnchor.constraint(equalTo:self.rightAnchor, constant: 0).isActive = true
+        CellView.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        CellView.widthAnchor.constraint(equalToConstant: bounds.width).isActive = true
+        
+        imageView.leftAnchor.constraint(equalTo: CellView.leftAnchor, constant:20).isActive = true
+        imageView.topAnchor.constraint(equalTo: CellView.topAnchor, constant:20).isActive = true
+        imageView.bottomAnchor.constraint(equalTo: CellView.bottomAnchor, constant:20).isActive = true
+        imageView.centerYAnchor.constraint(equalTo: CellView.centerYAnchor).isActive = true
         
         
         

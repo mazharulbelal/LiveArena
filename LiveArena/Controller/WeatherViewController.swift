@@ -9,10 +9,12 @@ import UIKit
 
 class WeatherViewController: UIViewController {
     
-        let newCollection: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        let collection = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: layout)
-        layout.scrollDirection = .horizontal
+    let bounds = UIScreen.main.bounds
+    
+    let newCollection: UICollectionView = {
+    let layout = UICollectionViewFlowLayout()
+    let collection = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: layout)
+        layout.scrollDirection = .vertical
         collection.backgroundColor = UIColor.gray
         collection.translatesAutoresizingMaskIntoConstraints = false
         collection.isScrollEnabled = true
@@ -46,20 +48,21 @@ extension WeatherViewController: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = newCollection.dequeueReusableCell(withReuseIdentifier: "WeatherCell", for: indexPath) as! WeatherCell
         cell.backgroundColor  = .white
-        cell.layer.cornerRadius = 5
-        cell.layer.shadowOpacity = 3
-        cell.imageView.image = UIImage(named: "user")
+        cell.layer.cornerRadius = 10
+        cell.layer.shadowOpacity = 5
+        cell.imageView.image = UIImage(named: "snowy")
+        
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 300, height: 150)
+        return CGSize(width: bounds.width, height: 200)
     }
     
+ 
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
-    }
+  
     
     
     
