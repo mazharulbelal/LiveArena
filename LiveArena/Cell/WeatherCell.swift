@@ -1,82 +1,33 @@
-
+//
+//  WeatherCell.swift
+//  LiveArena
+//
+//  Created by Mazharul Belal on 20/9/19.
+//  Copyright © 2019 Mazharul Belal. All rights reserved.
+//
 
 import UIKit
 
-
 class WeatherCell: UICollectionViewCell {
     
+     static let name = "WeatherCell"
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        addSubview(CellView)
-        addSubview(imageView)
-        addSubview(textLabel)
-        
-        AutoLayout()
-    }
-    
-    let imageView: UIImageView = {
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .scaleAspectFill
-        image.clipsToBounds = true
-        image.layer.cornerRadius = 5
-        image.backgroundColor = UIColor.gray
-        return image
-    }()
-    
-    
-    let textLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .center
-        label.textColor = .black
-        label.text = "New Person"
-        return label
-    }()
-    
-    
-    let CellView : UIView = {
-        let cellView = UIView()
-        cellView.backgroundColor = UIColor.white
-        cellView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return cellView
-        
-    }()
+    @IBOutlet weak var backView : UIView!
+    @IBOutlet weak var dateLabel : UILabel!
+    @IBOutlet weak var timeData : UILabel!
+    @IBOutlet weak var TempData : UILabel!
+    @IBOutlet weak var weathreTitle : UILabel!
+    @IBOutlet weak var maxWeather : UILabel!
+    @IBOutlet weak var windSpeed : UILabel!
+    @IBOutlet weak var weatherImage : UILabel!
     
     
    
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
     }
-    
-    
-    
-    
-    func  AutoLayout(){
-        
-        
-        CellView.leftAnchor.constraint(equalTo:self.leftAnchor, constant: 0).isActive = true
-        CellView.rightAnchor.constraint(equalTo:self.rightAnchor, constant: 0).isActive = true
-        CellView.heightAnchor.constraint(equalToConstant: 150).isActive = true
-        CellView.widthAnchor.constraint(equalToConstant: bounds.width).isActive = true
-        
-        imageView.leftAnchor.constraint(equalTo: CellView.leftAnchor, constant:20).isActive = true
-        imageView.topAnchor.constraint(equalTo: CellView.topAnchor, constant:20).isActive = true
-        imageView.bottomAnchor.constraint(equalTo: CellView.bottomAnchor, constant:20).isActive = true
-        imageView.centerYAnchor.constraint(equalTo: CellView.centerYAnchor).isActive = true
-        
-        
-        
-        textLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        textLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 5).isActive = true
-        textLabel.heightAnchor.constraint(equalToConstant: 15).isActive = true
-        textLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
-    }
-    
-    
-    
+
 }

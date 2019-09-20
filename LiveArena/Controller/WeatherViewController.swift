@@ -11,6 +11,8 @@ class WeatherViewController: UIViewController {
     
     let bounds = UIScreen.main.bounds
     
+    var WeatherData : [WeatherCategory] = []
+    
     let newCollection: UICollectionView = {
     let layout = UICollectionViewFlowLayout()
     let collection = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: layout)
@@ -30,10 +32,10 @@ class WeatherViewController: UIViewController {
         newCollection.dataSource = self
         
         
-        newCollection.register(WeatherCell.self, forCellWithReuseIdentifier: "WeatherCell")
+        newCollection.register(WeatherCell.self, forCellWithReuseIdentifier: WeatherCell.name)
         
         view.addSubview(newCollection)
-        AutoLayout()
+        
         
     }
     
@@ -46,12 +48,9 @@ extension WeatherViewController: UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = newCollection.dequeueReusableCell(withReuseIdentifier: "WeatherCell", for: indexPath) as! WeatherCell
-        cell.backgroundColor  = .white
-        cell.layer.cornerRadius = 10
-        cell.layer.shadowOpacity = 5
-        cell.imageView.image = UIImage(named: "snowy")
+        let cell = newCollection.dequeueReusableCell(withReuseIdentifier: WeatherCell.name, for: indexPath) as! WeatherCell
         
+        cell.dateLabel.text =
         
         return cell
     }
@@ -67,17 +66,7 @@ extension WeatherViewController: UICollectionViewDataSource, UICollectionViewDel
     
     
     
-    func AutoLayout(){
-        
-        
-        newCollection.translatesAutoresizingMaskIntoConstraints = false
-        newCollection.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor).isActive = true
-        newCollection.leftAnchor.constraint(equalTo:view.safeAreaLayoutGuide.leftAnchor).isActive = true
-        newCollection.rightAnchor.constraint(equalTo:view.safeAreaLayoutGuide.rightAnchor).isActive = true
-        newCollection.bottomAnchor.constraint(equalTo:view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        
-        
-    }
+   
     
     
 }

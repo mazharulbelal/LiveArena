@@ -9,6 +9,7 @@ target 'LiveArena' do
 	pod 'Firebase/Auth'
 	pod ‘Firebase/Core‘
 	pod ‘Firebase/Database‘
+  pod 'ActionKit', '~> 2.5.2'
 	
 
   # Pods for LiveArena
