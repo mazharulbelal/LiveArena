@@ -115,7 +115,14 @@ extension WeatherViewController : UICollectionViewDelegate, UICollectionViewData
          let weatherdata =  self.weatherData[indexPath.row]
         
             cell.dateLabel.text = weatherdata.dateData
-            
+            cell.timeData.text = weatherdata.timeData
+            cell.TempData.text = weatherdata.TempData
+            cell.weathreTitle.text = weatherdata.weathreTitle
+            cell.maxWeather.text = String(format:"Max Temperature: \(String(describing: weatherdata.maxWeather!))")
+            cell.windSpeed.text = weatherdata.windSpeed
+            cell.weatherImage.image = UIImage(named: weatherdata.weatherImage)
+        
+        
         
         return cell
     }

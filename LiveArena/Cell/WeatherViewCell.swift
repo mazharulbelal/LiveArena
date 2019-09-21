@@ -21,7 +21,7 @@ class WeatherViewCell: UICollectionViewCell {
     @IBOutlet weak var weathreTitle : UILabel!
     @IBOutlet weak var maxWeather : UILabel!
     @IBOutlet weak var windSpeed : UILabel!
-    @IBOutlet weak var weatherImage : UILabel!
+    @IBOutlet weak var weatherImage : UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
