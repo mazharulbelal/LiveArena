@@ -7,11 +7,12 @@
 
 import UIKit
 
+
+
 class WeatherViewController: UIViewController {
     
     
-    var NameArray = ["AAA","BBB"]
-
+    
     var weatherData : [WeatherCategory] = []
    
     

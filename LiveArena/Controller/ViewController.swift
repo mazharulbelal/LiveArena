@@ -9,6 +9,7 @@
 
 import UIKit
 import Firebase
+import ActionKit
 
 class ViewController: UIViewController {
     
@@ -110,7 +111,11 @@ override func viewDidLoad() {
         let image = UIImage(named: "Facebook") as UIImage?
         let FacebookButton = UIButton(type: UIButton.ButtonType.custom) as UIButton
         FacebookButton.setImage(image, for: .normal)
-        FacebookButton.addTarget(self, action: #selector(OnFaceBookButtonClicked), for: .touchUpInside)
+        FacebookButton.addControlEvent(.touchUpInside, {
+            
+            print("facebook")
+            
+        })
         
         
         let image2 = UIImage(named: "Twitter") as UIImage?
@@ -352,12 +357,7 @@ override func viewDidLoad() {
     
     
     
-    
-    @objc func OnFaceBookButtonClicked (){
-        
-        print("Facebook Button")
-    }
-    
+ 
     
     @objc func OnTwitterButtonClicked () {
         

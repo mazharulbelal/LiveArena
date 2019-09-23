@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1D073459230951400086E570 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D073458230951400086E570 /* GoogleService-Info.plist */; };
+		1D2D1B5C2337526D00272FF4 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2D1B5B2337526D00272FF4 /* heart.png */; };
 		1D49304522F899BB00EAB70F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D49304422F899BB00EAB70F /* AppDelegate.swift */; };
 		1D49304722F899BB00EAB70F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D49304622F899BB00EAB70F /* ViewController.swift */; };
 		1D49304A22F899BB00EAB70F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D49304822F899BB00EAB70F /* Main.storyboard */; };
@@ -26,6 +27,9 @@
 		1DA617E8232A6DAC002C6B50 /* WeatherCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA617E5232A6DAC002C6B50 /* WeatherCategory.swift */; };
 		1DA617E9232A6DAC002C6B50 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA617E6232A6DAC002C6B50 /* WeatherData.swift */; };
 		1DE42F1622FD642500BDB609 /* Recovery Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE42F1522FD642500BDB609 /* Recovery Account.swift */; };
+		1DF734612337B47F003C6AAD /* MP3CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF7345F2337B47F003C6AAD /* MP3CollectionCell.swift */; };
+		1DF734622337B47F003C6AAD /* MP3CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DF734602337B47F003C6AAD /* MP3CollectionCell.xib */; };
+		1DF734642337BD0E003C6AAD /* albam phoro.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DF734632337BD0E003C6AAD /* albam phoro.png */; };
 		1DFE1EB022FA66110099EEF1 /* DetailsWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFE1EAF22FA66110099EEF1 /* DetailsWeather.swift */; };
 		403826F4490285CC3DD28895 /* Pods_LiveArenaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0B72967812CC9B4058FC34 /* Pods_LiveArenaUITests.framework */; };
 		588786A7AFF1BA808DFACFEC /* Pods_LiveArena.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFE1998C4702F8ECDF981ED5 /* Pods_LiveArena.framework */; };
@@ -53,6 +57,7 @@
 		0D0B72967812CC9B4058FC34 /* Pods_LiveArenaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveArenaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C2B775625A2E01AFDFF4D3 /* Pods-LiveArenaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveArenaTests.release.xcconfig"; path = "Target Support Files/Pods-LiveArenaTests/Pods-LiveArenaTests.release.xcconfig"; sourceTree = "<group>"; };
 		1D073458230951400086E570 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1D2D1B5B2337526D00272FF4 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
 		1D49304122F899BB00EAB70F /* LiveArena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveArena.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D49304422F899BB00EAB70F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D49304622F899BB00EAB70F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +82,9 @@
 		1DA617E5232A6DAC002C6B50 /* WeatherCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCategory.swift; sourceTree = "<group>"; };
 		1DA617E6232A6DAC002C6B50 /* WeatherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		1DE42F1522FD642500BDB609 /* Recovery Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recovery Account.swift"; sourceTree = "<group>"; };
+		1DF7345F2337B47F003C6AAD /* MP3CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MP3CollectionCell.swift; sourceTree = "<group>"; };
+		1DF734602337B47F003C6AAD /* MP3CollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MP3CollectionCell.xib; sourceTree = "<group>"; };
+		1DF734632337BD0E003C6AAD /* albam phoro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "albam phoro.png"; sourceTree = "<group>"; };
 		1DFE1EAF22FA66110099EEF1 /* DetailsWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsWeather.swift; sourceTree = "<group>"; };
 		95A377696B8525A40315FF36 /* Pods-LiveArena.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveArena.debug.xcconfig"; path = "Target Support Files/Pods-LiveArena/Pods-LiveArena.debug.xcconfig"; sourceTree = "<group>"; };
 		BDFEE38BE01A105F95C26BDA /* Pods-LiveArenaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveArenaUITests.release.xcconfig"; path = "Target Support Files/Pods-LiveArenaUITests/Pods-LiveArenaUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +123,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D2D1B5523374B7100272FF4 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				1DF734632337BD0E003C6AAD /* albam phoro.png */,
+				1D2D1B5B2337526D00272FF4 /* heart.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		1D49303822F899BB00EAB70F = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +161,7 @@
 				1DCC65F7232246DE002E3194 /* Controller */,
 				1D49304822F899BB00EAB70F /* Main.storyboard */,
 				1DB06889232AA9A800744F2C /* Model */,
+				1D2D1B5523374B7100272FF4 /* Image */,
 				1DA617D2232A3BD1002C6B50 /* Cell */,
 				1D49304B22F899C300EAB70F /* Assets.xcassets */,
 				1D49304D22F899C300EAB70F /* LaunchScreen.storyboard */,
@@ -175,6 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				1D8AC8CB233668B2005495C6 /* WeatherViewCell.swift */,
+				1DF7345F2337B47F003C6AAD /* MP3CollectionCell.swift */,
+				1DF734602337B47F003C6AAD /* MP3CollectionCell.xib */,
 				1D8AC8CC233668B2005495C6 /* WeatherViewCell.xib */,
 			);
 			path = Cell;
@@ -338,9 +358,12 @@
 			files = (
 				1D49304F22F899C300EAB70F /* LaunchScreen.storyboard in Resources */,
 				1D8AC8CE233668B2005495C6 /* WeatherViewCell.xib in Resources */,
+				1DF734622337B47F003C6AAD /* MP3CollectionCell.xib in Resources */,
 				1D073459230951400086E570 /* GoogleService-Info.plist in Resources */,
 				1D49304C22F899C300EAB70F /* Assets.xcassets in Resources */,
+				1D2D1B5C2337526D00272FF4 /* heart.png in Resources */,
 				1D49304A22F899BB00EAB70F /* Main.storyboard in Resources */,
+				1DF734642337BD0E003C6AAD /* albam phoro.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,22 +412,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LiveArena/Pods-LiveArena-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-LiveArena/Pods-LiveArena-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-LiveArena/Pods-LiveArena-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -468,6 +480,7 @@
 				1D49304722F899BB00EAB70F /* ViewController.swift in Sources */,
 				1D8AC8CD233668B2005495C6 /* WeatherViewCell.swift in Sources */,
 				1DA617E8232A6DAC002C6B50 /* WeatherCategory.swift in Sources */,
+				1DF734612337B47F003C6AAD /* MP3CollectionCell.swift in Sources */,
 				1D49304522F899BB00EAB70F /* AppDelegate.swift in Sources */,
 				1DA617E9232A6DAC002C6B50 /* WeatherData.swift in Sources */,
 				1DFE1EB022FA66110099EEF1 /* DetailsWeather.swift in Sources */,

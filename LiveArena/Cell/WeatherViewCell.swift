@@ -26,7 +26,8 @@ class WeatherViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        
+        weatherImage.layer.cornerRadius = 8.0
+        weatherImage.clipsToBounds = true
         
     }
 
