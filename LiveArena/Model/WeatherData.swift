@@ -28,11 +28,15 @@ class WeatherData {
         return [dhakaCity,pabnaCity,kustiaCity,tangailCity,bograCity,rajshahiCity]
         
         
-        
-        
-        
+
       
     }
     
     
+    
+    
+    
 }
+
+
+

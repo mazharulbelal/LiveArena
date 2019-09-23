@@ -14,6 +14,8 @@ class MP3CollectionCell: UICollectionViewCell {
     static var name = "MP3CollectionCell"
     
     @IBOutlet weak var SongTIitlelabel : UILabel!
+    @IBOutlet weak var PRofileImageView : UIImageView!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

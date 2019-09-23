@@ -11,7 +11,7 @@ import UIKit
 class MP3TableViewController: UIViewController {
     
     
-    var NameArray = ["AAA", "BBB"]
+    var mp3Data: [MP3Category] = []
     
     
     let mCollectionView: UICollectionView = {
@@ -31,7 +31,7 @@ class MP3TableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.mp3Data = MP3Data().getMP3data()
         mCollectionView.delegate = self
         mCollectionView.dataSource = self
         
@@ -50,14 +50,13 @@ class MP3TableViewController: UIViewController {
     
     
     func getCellSize () -> CGSize {
-        let vw = CGFloat(self.view.frame.width)
-        let margins: CGFloat = 10.0 + 10.0
-        let gapBetweenItems: CGFloat = 0.0
-        let width: CGFloat = vw - margins - gapBetweenItems
-        let numberOfItemsPerRow: CGFloat = 1
-        return CGSize(width: (width/numberOfItemsPerRow) - 5.0, height: 210.00)
+    let vw = CGFloat(self.view.frame.width)
+    let margins: CGFloat = 10.0 + 10.0
+    let gapBetweenItems: CGFloat = 0.0
+    let width: CGFloat = vw - margins - gapBetweenItems
+    let numberOfItemsPerRow: CGFloat = 2.00
+    return CGSize(width: (width/numberOfItemsPerRow) - 5.0, height: 192.0)
     }
-    
 
 
 }
@@ -77,7 +76,7 @@ extension MP3TableViewController : UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return NameArray.count
+        return mp3Data.count
     }
     
     
@@ -103,6 +102,12 @@ extension MP3TableViewController : UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MP3CollectionCell.name, for: indexPath) as! MP3CollectionCell
+        
+        
+        let mp3data = self.mp3Data[indexPath.row]
+        
+        cell.SongTIitlelabel.text = mp3data.SongTitleData
+        cell.PRofileImageView.image = UIImage(named: mp3data.SongImageData)
         
     return cell
     }

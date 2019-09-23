@@ -30,9 +30,14 @@ struct WeatherCategory {
         self.weatherImage = weatherImage
     }
     
-    
-    
-    
-    
-    
 }
+
+
+
+    
+    
+    
+    
+    
+    
+
