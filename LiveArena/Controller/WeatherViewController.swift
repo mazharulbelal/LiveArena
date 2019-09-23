@@ -39,6 +39,13 @@ class WeatherViewController: UIViewController {
         super.viewDidLoad()
         
         
+        
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        let search = UISearchController(searchResultsController: nil)
+        search.searchResultsUpdater = self as? UISearchResultsUpdating
+        self.navigationItem.searchController = search
+        
+        
         self.weatherData = WeatherData().getWeatherData()
         
         mCollectionView.delegate = self

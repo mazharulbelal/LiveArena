@@ -31,6 +31,13 @@ class MP3TableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        let search = UISearchController(searchResultsController: nil)
+        search.searchResultsUpdater = self as? UISearchResultsUpdating
+        self.navigationItem.searchController = search
+        
+        
+        
         self.mp3Data = MP3Data().getMP3data()
         mCollectionView.delegate = self
         mCollectionView.dataSource = self
