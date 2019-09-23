@@ -54,8 +54,8 @@ class MP3TableViewController: UIViewController {
     let margins: CGFloat = 10.0 + 10.0
     let gapBetweenItems: CGFloat = 0.0
     let width: CGFloat = vw - margins - gapBetweenItems
-    let numberOfItemsPerRow: CGFloat = 2.00
-    return CGSize(width: (width/numberOfItemsPerRow) - 5.0, height: 192.0)
+    let numberOfItemsPerRow: CGFloat = 3.00
+    return CGSize(width: (width/numberOfItemsPerRow) - 7.0, height: 210.0)
     }
 
 
