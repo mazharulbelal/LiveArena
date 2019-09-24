@@ -11,6 +11,7 @@ target 'LiveArena' do
 	pod ‘Firebase/Database‘
  
   pod 'ActionKit', '~> 2.5.2'
+  pod 'Cosmos', '~> 19.0'
 	
 
   # Pods for LiveArena

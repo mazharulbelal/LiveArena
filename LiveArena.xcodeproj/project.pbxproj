@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		1D073459230951400086E570 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D073458230951400086E570 /* GoogleService-Info.plist */; };
 		1D2D1B5C2337526D00272FF4 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2D1B5B2337526D00272FF4 /* heart.png */; };
+		1D3170FE2339E3C300267B46 /* albam5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D3170F52339E3C100267B46 /* albam5.jpg */; };
+		1D3170FF2339E3C300267B46 /* albam4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D3170F62339E3C200267B46 /* albam4.jpg */; };
+		1D3171002339E3C300267B46 /* albam6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D3170F72339E3C200267B46 /* albam6.jpg */; };
+		1D3171012339E3C300267B46 /* albam7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D3170F82339E3C200267B46 /* albam7.jpg */; };
+		1D3171022339E3C300267B46 /* albam1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D3170F92339E3C200267B46 /* albam1.jpg */; };
+		1D3171032339E3C300267B46 /* albam3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D3170FA2339E3C200267B46 /* albam3.jpg */; };
+		1D3171042339E3C300267B46 /* albam9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D3170FB2339E3C300267B46 /* albam9.jpg */; };
+		1D3171052339E3C300267B46 /* albam8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D3170FC2339E3C300267B46 /* albam8.jpg */; };
+		1D3171062339E3C300267B46 /* albam2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D3170FD2339E3C300267B46 /* albam2.jpg */; };
 		1D3BFEC723388DB1006371F7 /* MP3Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3BFEC623388DB1006371F7 /* MP3Data.swift */; };
 		1D3BFEC923388DC5006371F7 /* MP3Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3BFEC823388DC5006371F7 /* MP3Category.swift */; };
 		1D49304522F899BB00EAB70F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D49304422F899BB00EAB70F /* AppDelegate.swift */; };
@@ -31,7 +40,6 @@
 		1DE42F1622FD642500BDB609 /* Recovery Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE42F1522FD642500BDB609 /* Recovery Account.swift */; };
 		1DF734612337B47F003C6AAD /* MP3CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF7345F2337B47F003C6AAD /* MP3CollectionCell.swift */; };
 		1DF734622337B47F003C6AAD /* MP3CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DF734602337B47F003C6AAD /* MP3CollectionCell.xib */; };
-		1DF734642337BD0E003C6AAD /* albam1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DF734632337BD0E003C6AAD /* albam1.png */; };
 		1DFE1EB022FA66110099EEF1 /* DetailsWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFE1EAF22FA66110099EEF1 /* DetailsWeather.swift */; };
 		403826F4490285CC3DD28895 /* Pods_LiveArenaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0B72967812CC9B4058FC34 /* Pods_LiveArenaUITests.framework */; };
 		588786A7AFF1BA808DFACFEC /* Pods_LiveArena.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFE1998C4702F8ECDF981ED5 /* Pods_LiveArena.framework */; };
@@ -60,6 +68,15 @@
 		13C2B775625A2E01AFDFF4D3 /* Pods-LiveArenaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveArenaTests.release.xcconfig"; path = "Target Support Files/Pods-LiveArenaTests/Pods-LiveArenaTests.release.xcconfig"; sourceTree = "<group>"; };
 		1D073458230951400086E570 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1D2D1B5B2337526D00272FF4 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		1D3170F52339E3C100267B46 /* albam5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = albam5.jpg; sourceTree = "<group>"; };
+		1D3170F62339E3C200267B46 /* albam4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = albam4.jpg; sourceTree = "<group>"; };
+		1D3170F72339E3C200267B46 /* albam6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = albam6.jpg; sourceTree = "<group>"; };
+		1D3170F82339E3C200267B46 /* albam7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = albam7.jpg; sourceTree = "<group>"; };
+		1D3170F92339E3C200267B46 /* albam1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = albam1.jpg; sourceTree = "<group>"; };
+		1D3170FA2339E3C200267B46 /* albam3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = albam3.jpg; sourceTree = "<group>"; };
+		1D3170FB2339E3C300267B46 /* albam9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = albam9.jpg; sourceTree = "<group>"; };
+		1D3170FC2339E3C300267B46 /* albam8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = albam8.jpg; sourceTree = "<group>"; };
+		1D3170FD2339E3C300267B46 /* albam2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = albam2.jpg; sourceTree = "<group>"; };
 		1D3BFEC623388DB1006371F7 /* MP3Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MP3Data.swift; sourceTree = "<group>"; };
 		1D3BFEC823388DC5006371F7 /* MP3Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MP3Category.swift; sourceTree = "<group>"; };
 		1D49304122F899BB00EAB70F /* LiveArena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveArena.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,7 +105,6 @@
 		1DE42F1522FD642500BDB609 /* Recovery Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recovery Account.swift"; sourceTree = "<group>"; };
 		1DF7345F2337B47F003C6AAD /* MP3CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MP3CollectionCell.swift; sourceTree = "<group>"; };
 		1DF734602337B47F003C6AAD /* MP3CollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MP3CollectionCell.xib; sourceTree = "<group>"; };
-		1DF734632337BD0E003C6AAD /* albam1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = albam1.png; sourceTree = "<group>"; };
 		1DFE1EAF22FA66110099EEF1 /* DetailsWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsWeather.swift; sourceTree = "<group>"; };
 		95A377696B8525A40315FF36 /* Pods-LiveArena.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveArena.debug.xcconfig"; path = "Target Support Files/Pods-LiveArena/Pods-LiveArena.debug.xcconfig"; sourceTree = "<group>"; };
 		BDFEE38BE01A105F95C26BDA /* Pods-LiveArenaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveArenaUITests.release.xcconfig"; path = "Target Support Files/Pods-LiveArenaUITests/Pods-LiveArenaUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,7 +146,15 @@
 		1D2D1B5523374B7100272FF4 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				1DF734632337BD0E003C6AAD /* albam1.png */,
+				1D3170F92339E3C200267B46 /* albam1.jpg */,
+				1D3170FD2339E3C300267B46 /* albam2.jpg */,
+				1D3170FA2339E3C200267B46 /* albam3.jpg */,
+				1D3170F62339E3C200267B46 /* albam4.jpg */,
+				1D3170F52339E3C100267B46 /* albam5.jpg */,
+				1D3170F72339E3C200267B46 /* albam6.jpg */,
+				1D3170F82339E3C200267B46 /* albam7.jpg */,
+				1D3170FC2339E3C300267B46 /* albam8.jpg */,
+				1D3170FB2339E3C300267B46 /* albam9.jpg */,
 				1D2D1B5B2337526D00272FF4 /* heart.png */,
 			);
 			path = Image;
@@ -362,14 +386,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D3171002339E3C300267B46 /* albam6.jpg in Resources */,
+				1D3170FF2339E3C300267B46 /* albam4.jpg in Resources */,
 				1D49304F22F899C300EAB70F /* LaunchScreen.storyboard in Resources */,
+				1D3171022339E3C300267B46 /* albam1.jpg in Resources */,
 				1D8AC8CE233668B2005495C6 /* WeatherViewCell.xib in Resources */,
+				1D3171052339E3C300267B46 /* albam8.jpg in Resources */,
+				1D3171042339E3C300267B46 /* albam9.jpg in Resources */,
 				1DF734622337B47F003C6AAD /* MP3CollectionCell.xib in Resources */,
+				1D3171062339E3C300267B46 /* albam2.jpg in Resources */,
+				1D3171032339E3C300267B46 /* albam3.jpg in Resources */,
+				1D3170FE2339E3C300267B46 /* albam5.jpg in Resources */,
+				1D3171012339E3C300267B46 /* albam7.jpg in Resources */,
 				1D073459230951400086E570 /* GoogleService-Info.plist in Resources */,
 				1D49304C22F899C300EAB70F /* Assets.xcassets in Resources */,
 				1D2D1B5C2337526D00272FF4 /* heart.png in Resources */,
 				1D49304A22F899BB00EAB70F /* Main.storyboard in Resources */,
-				1DF734642337BD0E003C6AAD /* albam1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
