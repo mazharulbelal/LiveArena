@@ -13,14 +13,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MP3CollectionCell" id="vCH-vk-Kc6" customClass="MP3CollectionCell" customModule="LiveArena" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="150" height="218"/>
+            <rect key="frame" x="0.0" y="0.0" width="150" height="240"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="150" height="218"/>
+                <rect key="frame" x="0.0" y="0.0" width="150" height="240"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tGQ-2p-WKu">
-                        <rect key="frame" x="5" y="5" width="140" height="208"/>
+                        <rect key="frame" x="5" y="5" width="140" height="230"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cja-lz-QIK">
                                 <rect key="frame" x="10" y="10" width="120" height="125"/>
@@ -34,22 +34,27 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="og6-fd-iyy">
-                                <rect key="frame" x="119" y="182" width="16" height="16"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rnZ-UH-ZPd" customClass="CosmosView" customModule="Cosmos">
+                                <rect key="frame" x="5" y="200" width="130" height="25"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="16" id="3kj-R4-1QM"/>
-                                    <constraint firstAttribute="height" constant="16" id="7MX-qG-OIh"/>
+                                    <constraint firstAttribute="height" constant="25" id="vc4-7s-HD6"/>
                                 </constraints>
-                                <state key="normal" image="heart.png" backgroundImage="heart.png"/>
-                            </button>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                        <real key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="NQn-zp-ma6" firstAttribute="top" secondItem="cja-lz-QIK" secondAttribute="bottom" constant="10" id="4tu-X3-jmC"/>
-                            <constraint firstAttribute="bottom" secondItem="og6-fd-iyy" secondAttribute="bottom" constant="10" id="Hck-th-e8G"/>
+                            <constraint firstItem="rnZ-UH-ZPd" firstAttribute="leading" secondItem="tGQ-2p-WKu" secondAttribute="leading" constant="5" id="GGY-31-PIU"/>
+                            <constraint firstAttribute="trailing" secondItem="rnZ-UH-ZPd" secondAttribute="trailing" constant="5" id="I5m-sl-t7G"/>
                             <constraint firstItem="cja-lz-QIK" firstAttribute="leading" secondItem="tGQ-2p-WKu" secondAttribute="leading" constant="10" id="IbS-jw-scx"/>
+                            <constraint firstAttribute="bottom" secondItem="rnZ-UH-ZPd" secondAttribute="bottom" constant="5" id="PAa-6L-mwL"/>
                             <constraint firstItem="cja-lz-QIK" firstAttribute="top" secondItem="tGQ-2p-WKu" secondAttribute="top" constant="10" id="RnY-50-76j"/>
-                            <constraint firstAttribute="trailing" secondItem="og6-fd-iyy" secondAttribute="trailing" constant="5" id="aST-dv-gtc"/>
                             <constraint firstItem="NQn-zp-ma6" firstAttribute="leading" secondItem="tGQ-2p-WKu" secondAttribute="leading" constant="10" id="qqu-gV-nCd"/>
                             <constraint firstAttribute="trailing" secondItem="cja-lz-QIK" secondAttribute="trailing" constant="10" id="wL3-Sh-ENf"/>
                             <constraint firstAttribute="trailing" secondItem="NQn-zp-ma6" secondAttribute="trailing" constant="10" id="y2k-x8-pDe"/>
@@ -64,16 +69,13 @@
                 <constraint firstItem="tGQ-2p-WKu" firstAttribute="leading" secondItem="vCH-vk-Kc6" secondAttribute="leading" constant="5" id="uV5-KD-yjg"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="mfp-JT-Ic7"/>
-            <size key="customSize" width="151" height="222"/>
+            <size key="customSize" width="151" height="244"/>
             <connections>
                 <outlet property="PRofileImageView" destination="cja-lz-QIK" id="BeV-Qf-Vjt"/>
                 <outlet property="SongTIitlelabel" destination="NQn-zp-ma6" id="fG0-SC-Uth"/>
                 <outlet property="containerView" destination="tGQ-2p-WKu" id="V8H-3s-RdB"/>
             </connections>
-            <point key="canvasLocation" x="-163.19999999999999" y="-10.794602698650676"/>
+            <point key="canvasLocation" x="-163.19999999999999" y="-0.89955022488755632"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="heart.png" width="24" height="24"/>
-    </resources>
 </document>

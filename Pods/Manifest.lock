@@ -1,5 +1,6 @@
 PODS:
   - ActionKit (2.5.3)
+  - Cosmos (19.0.3)
   - Firebase/Analytics (6.6.0):
     - Firebase/Core
   - Firebase/Auth (6.6.0):
@@ -86,6 +87,7 @@ PODS:
 
 DEPENDENCIES:
   - ActionKit (~> 2.5.2)
+  - Cosmos (~> 19.0)
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Core
@@ -94,6 +96,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - ActionKit
+    - Cosmos
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -113,6 +116,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   ActionKit: c1b6427fd36a0fe2223555679bcc5dea437af5b3
+  Cosmos: a6fb17284281fa12cf4c85c2efecd440a215ec44
   Firebase: a2b5951f30ff38fd3b3bdae9c7d340f940fd3c51
   FirebaseAnalytics: 48414ae5cbf6976d8a2f7177e0466540e5ab33ce
   FirebaseAuth: 2be1924ddbc741fe2a02cb6963ca747e09a2e05c
@@ -130,6 +134,6 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
 
-PODFILE CHECKSUM: b5b19f3e10f4a0103d5d35dffbb2b1ec7cf768fb
+PODFILE CHECKSUM: 52a953d5339e00db31d612e807ba03a62fd0cbbc
 
 COCOAPODS: 1.7.5

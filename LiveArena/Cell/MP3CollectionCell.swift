@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cosmos
 
 class MP3CollectionCell: UICollectionViewCell {
     
@@ -16,6 +17,8 @@ class MP3CollectionCell: UICollectionViewCell {
     @IBOutlet weak var SongTIitlelabel : UILabel!
     @IBOutlet weak var PRofileImageView : UIImageView!
     @IBOutlet weak var containerView: UIView!
+    
+    
     
     
     
@@ -36,9 +39,13 @@ class MP3CollectionCell: UICollectionViewCell {
         self.containerView.layer.shadowOpacity = 0.10
         self.containerView.layer.shadowRadius = 1.2
         
+    
         
         
         
     }
+    
+    
+
 
 }
