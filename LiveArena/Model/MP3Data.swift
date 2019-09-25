@@ -39,4 +39,26 @@ class MP3Data {
     }
     
     
+    
+    
+    func getRecentMP3data() -> [MP3Category]{
+        
+        
+        
+        let albam5 = MP3Category(SongTitleData: "Forever Neverland'", SongImageData: "albam5.jpg")
+        let albam6 = MP3Category(SongTitleData: "Missy Higgins, 'Solastalgia'", SongImageData: "albam6.jpg")
+        let albam7 = MP3Category(SongTitleData: "Kanye West and Kid Cudi, 'Kids See Ghosts'", SongImageData: "albam7.jpg")
+        let albam8 = MP3Category(SongTitleData: "Cardi B, 'Invasion of Privacy'", SongImageData: "albam8.jpg")
+        let albam9 = MP3Category(SongTitleData: "Travis Scott, 'Astroworld'", SongImageData: "albam9.jpg")
+        let albam10 = MP3Category(SongTitleData: "Janelle Monáe, 'Dirty Computer'", SongImageData: "albam1.jpg")
+        
+        return [albam5,albam6,albam7,albam8,albam9,albam10]
+        
+        
+        
+    }
+    
+    
+    
+    
 }

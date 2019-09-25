@@ -12,6 +12,7 @@ class MP3TableViewController: UIViewController {
     
     
     var mp3Data: [MP3Category] = []
+    var mp3RecentData:[MP3Category] = []
     
     
     let mCollectionView: UICollectionView = {
@@ -39,6 +40,9 @@ class MP3TableViewController: UIViewController {
         
         
         self.mp3Data = MP3Data().getMP3data()
+        self.mp3RecentData = MP3Data().getRecentMP3data()
+        
+        
         mCollectionView.delegate = self
         mCollectionView.dataSource = self
         
@@ -49,6 +53,10 @@ class MP3TableViewController: UIViewController {
         self.mCollectionView.register(cellNib, forCellWithReuseIdentifier: MP3CollectionCell.name)
         
         
+        
+        let HeaderNib = UINib(nibName: "HeaderView", bundle: nil)
+        
+        self.mCollectionView.register(HeaderNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderView")
         
         
         
@@ -73,18 +81,65 @@ extension MP3TableViewController : UICollectionViewDelegate, UICollectionViewDat
     
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return 2
     }
     
-    
-    
+   
     
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
+        if section == 0{
+          return  mp3RecentData.count
+            
+        }
+        
         return mp3Data.count
     }
+    
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        
+        
+        if let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderView", for: indexPath) as? HeaderView {
+            
+            if indexPath.section == 0 {
+                header.HearTitleLabel.text = "Favorite Music"
+                
+            }
+            
+            else {
+                header.HearTitleLabel.text = "All Music"
+            }
+            
+            return header
+        }
+        
+        
+        return UICollectionReusableView.init()
+    }
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        
+        return CGSize(width: collectionView.frame.size.width, height: 40.0)
+    }
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -111,11 +166,25 @@ extension MP3TableViewController : UICollectionViewDelegate, UICollectionViewDat
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MP3CollectionCell.name, for: indexPath) as! MP3CollectionCell
         
         
-        let mp3data = self.mp3Data[indexPath.row]
+       
         
+        
+        if indexPath.section == 0 {
+            let mp3RecentData = self.mp3RecentData[indexPath.row]
+            cell.SongTIitlelabel.text = mp3RecentData.SongTitleData
+            cell.PRofileImageView.image = UIImage(named: mp3RecentData.SongImageData)
+            
+            return cell
+        }
+        else {
+         let mp3data = self.mp3Data[indexPath.row]
         cell.SongTIitlelabel.text = mp3data.SongTitleData
         cell.PRofileImageView.image = UIImage(named: mp3data.SongImageData)
+            
+            return cell
+        }
         
-    return cell
+   
+        
     }
 }
