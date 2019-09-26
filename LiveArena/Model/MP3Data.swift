@@ -52,7 +52,7 @@ class MP3Data {
         let albam18 = MP3Category(SongTitleData: "Travis Scott, 'Astroworld'", SongImageData: "albam9.jpg")
         
         
-        return [albam18,albam17,albam16,albam15,albam17]
+        return [albam18,albam17,albam16,albam15,albam17,albam14]
         
         
         

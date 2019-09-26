@@ -44,6 +44,8 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="starSize">
                                         <real key="value" value="17"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="fillstar"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="blackstar"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -78,4 +80,8 @@
             <point key="canvasLocation" x="-163.19999999999999" y="-0.89955022488755632"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="blackstar" width="16" height="16"/>
+        <image name="fillstar" width="16" height="16"/>
+    </resources>
 </document>
