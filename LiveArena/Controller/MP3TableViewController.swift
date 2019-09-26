@@ -55,10 +55,12 @@ class MP3TableViewController: UIViewController {
         
         
         let HeaderNib = UINib(nibName: "HeaderView", bundle: nil)
-        
         self.mCollectionView.register(HeaderNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderView")
         
         
+        
+        let HoldNib = UINib(nibName: UpComingCell.name, bundle: nil)
+        self.mCollectionView.register(HoldNib, forCellWithReuseIdentifier: UpComingCell.name)
         
     }
     
@@ -81,7 +83,7 @@ extension MP3TableViewController : UICollectionViewDelegate, UICollectionViewDat
     
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 3
     }
     
    
@@ -90,7 +92,12 @@ extension MP3TableViewController : UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        if section == 0{
+        
+        if section == 0 {
+            return 1
+        }
+        
+        else if section == 1{
           return  mp3RecentData.count
             
         }
@@ -108,6 +115,12 @@ extension MP3TableViewController : UICollectionViewDelegate, UICollectionViewDat
         if let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderView", for: indexPath) as? HeaderView {
             
             if indexPath.section == 0 {
+                header.HearTitleLabel.text = "Upcoming Music"
+                
+            }
+            
+            
+           else if indexPath.section == 1 {
                 header.HearTitleLabel.text = "Favorite Music"
                 
             }
@@ -148,6 +161,13 @@ extension MP3TableViewController : UICollectionViewDelegate, UICollectionViewDat
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if indexPath.section == 0 {
+            
+    
+            
+            return CGSize(width: collectionView.frame.width, height: 210)
+        }
+        
         return self.getCellSize()
     }
     
@@ -164,12 +184,19 @@ extension MP3TableViewController : UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MP3CollectionCell.name, for: indexPath) as! MP3CollectionCell
+        let Upcoming = collectionView.dequeueReusableCell(withReuseIdentifier: UpComingCell.name, for: indexPath) as! UpComingCell
         
-        
+        if indexPath.section == 0 {
+            
+            
+            
+           return Upcoming
+            
+        }
        
         
         
-        if indexPath.section == 0 {
+        else if indexPath.section == 1 {
             let mp3RecentData = self.mp3RecentData[indexPath.row]
             cell.SongTIitlelabel.text = mp3RecentData.SongTitleData
             cell.PRofileImageView.image = UIImage(named: mp3RecentData.SongImageData)

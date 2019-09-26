@@ -84,6 +84,7 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - PureLayout (3.1.4)
 
 DEPENDENCIES:
   - ActionKit (~> 2.5.2)
@@ -92,6 +93,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
+  - PureLayout
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -113,6 +115,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
+    - PureLayout
 
 SPEC CHECKSUMS:
   ActionKit: c1b6427fd36a0fe2223555679bcc5dea437af5b3
@@ -133,7 +136,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
 
-PODFILE CHECKSUM: 52a953d5339e00db31d612e807ba03a62fd0cbbc
+PODFILE CHECKSUM: bd4d86c42db0ef1fcf9a1a4fb44b8a7ba3cd061d
 
 COCOAPODS: 1.7.5

@@ -12,6 +12,7 @@ target 'LiveArena' do
  
   pod 'ActionKit', '~> 2.5.2'
   pod 'Cosmos', '~> 19.0'
+  pod 'PureLayout'
 	
 
   # Pods for LiveArena
