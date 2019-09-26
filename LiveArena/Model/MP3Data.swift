@@ -45,6 +45,26 @@ class MP3Data {
         
         
         
+        let albam14 = MP3Category(SongTitleData: "Forever Neverland'", SongImageData: "albam5.jpg")
+        let albam15 = MP3Category(SongTitleData: "Missy Higgins, 'Solastalgia'", SongImageData: "albam6.jpg")
+        let albam16 = MP3Category(SongTitleData: "Kanye West and Kid Cudi, 'Kids See Ghosts'", SongImageData: "albam7.jpg")
+        let albam17 = MP3Category(SongTitleData: "Cardi B, 'Invasion of Privacy'", SongImageData: "albam8.jpg")
+        let albam18 = MP3Category(SongTitleData: "Travis Scott, 'Astroworld'", SongImageData: "albam9.jpg")
+        
+        
+        return [albam14,albam15,albam16,albam17,albam18]
+        
+        
+        
+    }
+    
+    
+    
+    
+    func upcomingMP3data() -> [MP3Category]{
+        
+        
+        
         let albam5 = MP3Category(SongTitleData: "Forever Neverland'", SongImageData: "albam5.jpg")
         let albam6 = MP3Category(SongTitleData: "Missy Higgins, 'Solastalgia'", SongImageData: "albam6.jpg")
         let albam7 = MP3Category(SongTitleData: "Kanye West and Kid Cudi, 'Kids See Ghosts'", SongImageData: "albam7.jpg")
@@ -57,6 +77,7 @@ class MP3Data {
         
         
     }
+    
     
     
     
