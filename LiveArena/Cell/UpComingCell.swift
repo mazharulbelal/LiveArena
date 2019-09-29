@@ -35,6 +35,13 @@ class UpComingCell: UICollectionViewCell {
         collection.backgroundColor = UIColor.white
         collection.translatesAutoresizingMaskIntoConstraints = false
         collection.isScrollEnabled = true
+        
+        
+        
+        
+        
+        
+        
         return collection
     }()
     
@@ -128,6 +135,16 @@ extension UpComingCell : UICollectionViewDataSource,UICollectionViewDelegate, UI
         return cell
         
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
    
    
