@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-import FirebaseDatabase
+
 
 
 class CreateAccountViewController: UIViewController {
@@ -167,32 +167,31 @@ class CreateAccountViewController: UIViewController {
     
 @objc func onCreateAccountButtonClicked()
     {
-        print("Create Account")
+
         
-        
-        
-        
-        
-        //first take the email and password from the views
         let email = EmailAddress.text!
         let password = PasswordTextFleld.text!
         
         
-      
         
         Auth.auth().createUser(withEmail: email, password: password) {(user, error) in
             if user != nil {
                 
+                var UserInformation : [String: Any] = [:]
+                    UserInformation["name"] = ["Mazharul"]
+                    UserInformation["email"] = ["mazharul.belal@gmail.com"]
+                    UserInformation["phone"] = ["01711736369"]
                 
-                // User Regiestration
                 
-                var ref: DatabaseReference?
-                ref = Database.database().reference()
-                let post : [ String : AnyObject] = ["Full Name" : self.FullName.text! as AnyObject ,"Email Address" : self.EmailAddress.text! as AnyObject, "Phone Number": self.PhoneTextFleld.text! as AnyObject ]
-                
-                ref?.child("UserInformation").child(self.PhoneTextFleld.text!).setValue(post)
-                
-
+                Firestore.firestore().collection("UserInformation").addDocument(data: UserInformation)
+                { error in
+                    if let error = error {
+                        print("User Information Saving Error =  \(error.localizedDescription)")
+                    }
+                    else {
+                        print("User Create Sucessfully")
+                    }
+                }
                 
                 
                 let alertController = UIAlertController(title: "Create Sucessfully", message: "Your account has been successfully created. You can Login Now", preferredStyle: .alert)
