@@ -2,43 +2,103 @@
 
 import UIKit
 
-class RadioController: UITableViewController {
+class RadioController: UIViewController {
+
     
-    var RadioList = ["Radio - 1","Radio - 2", "Radio - 3"]
+    let PlayView: UIView = {
+        let playView = UIView()
+        playView.backgroundColor = UIColor.white
+        playView.translatesAutoresizingMaskIntoConstraints = false
+        return playView
+        
+    }()
+    
+    
+    
+    let mTableView: UITableView = {
+        
+        let mTableView = UITableView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+            mTableView.backgroundColor = UIColor.white
+            mTableView.translatesAutoresizingMaskIntoConstraints = false
+            mTableView.isScrollEnabled = true
+        return mTableView
+        
+    }()
+    
+    
+    
+    
+    
+    
+    
+ 
+    
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
+        
+        
+        mTableView.delegate = self
+        mTableView.dataSource = self
+        
+        view.addSubview(mTableView)
+        
+        
+        
+        
+        let cellNib = UINib(nibName: RadioCell.name, bundle: nil)
+        self.mTableView.register(cellNib, forCellReuseIdentifier: RadioCell.name)
+        
+        
+        self.view.backgroundColor = UIColor.gray
+        
+        
+        view.addSubview(PlayView)
+        AutoLayout()
+        
+        
+        
 
     }
+    
+    func AutoLayout() {
+        
+       
+        PlayView.topAnchor.constraint(equalTo: view.bottomAnchor, constant: -200).isActive = true
+        PlayView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
+        PlayView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
+        PlayView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 90).isActive = true
+        
+    }
+    
+    
+    
+    
 
 
 }
 
-
-extension RadioController{
+extension RadioController: UITableViewDelegate, UITableViewDataSource {
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
-        
-        
     }
     
-    
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return RadioList.count
-        
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
     }
     
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-            cell.textLabel?.text = RadioList[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: RadioCell.name, for: indexPath)
+        
+        
         
         return cell
     }
     
 }
+

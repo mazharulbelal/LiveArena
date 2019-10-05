@@ -41,6 +41,8 @@
 		1DA617E3232A6D85002C6B50 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA617E2232A6D84002C6B50 /* WeatherViewController.swift */; };
 		1DA617E8232A6DAC002C6B50 /* WeatherCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA617E5232A6DAC002C6B50 /* WeatherCategory.swift */; };
 		1DA617E9232A6DAC002C6B50 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA617E6232A6DAC002C6B50 /* WeatherData.swift */; };
+		1DDD9BE52348A20E00154ECC /* RadioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDD9BE32348A20E00154ECC /* RadioCell.swift */; };
+		1DDD9BE62348A20E00154ECC /* RadioCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD9BE42348A20E00154ECC /* RadioCell.xib */; };
 		1DE42F1622FD642500BDB609 /* Recovery Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE42F1522FD642500BDB609 /* Recovery Account.swift */; };
 		1DF734612337B47F003C6AAD /* MP3CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF7345F2337B47F003C6AAD /* MP3CollectionCell.swift */; };
 		1DF734622337B47F003C6AAD /* MP3CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DF734602337B47F003C6AAD /* MP3CollectionCell.xib */; };
@@ -110,6 +112,8 @@
 		1DA617E2232A6D84002C6B50 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeatherViewController.swift; path = /Users/belal/Documents/LiveArena/LiveArena/Controller/WeatherViewController.swift; sourceTree = "<absolute>"; };
 		1DA617E5232A6DAC002C6B50 /* WeatherCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCategory.swift; sourceTree = "<group>"; };
 		1DA617E6232A6DAC002C6B50 /* WeatherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		1DDD9BE32348A20E00154ECC /* RadioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioCell.swift; sourceTree = "<group>"; };
+		1DDD9BE42348A20E00154ECC /* RadioCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RadioCell.xib; sourceTree = "<group>"; };
 		1DE42F1522FD642500BDB609 /* Recovery Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recovery Account.swift"; sourceTree = "<group>"; };
 		1DF7345F2337B47F003C6AAD /* MP3CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MP3CollectionCell.swift; sourceTree = "<group>"; };
 		1DF734602337B47F003C6AAD /* MP3CollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MP3CollectionCell.xib; sourceTree = "<group>"; };
@@ -230,6 +234,8 @@
 			children = (
 				1D8AC8CB233668B2005495C6 /* WeatherViewCell.swift */,
 				1D94E37C233D1DCF00FC644A /* UpComingCell.swift */,
+				1DDD9BE32348A20E00154ECC /* RadioCell.swift */,
+				1DDD9BE42348A20E00154ECC /* RadioCell.xib */,
 				1D94E37D233D1DCF00FC644A /* UpComingCell.xib */,
 				1D020661233BD0DE00495406 /* HeaderView.swift */,
 				1D020662233BD0DE00495406 /* HeaderView.xib */,
@@ -411,6 +417,7 @@
 				1D3171062339E3C300267B46 /* albam2.jpg in Resources */,
 				1D3171032339E3C300267B46 /* albam3.jpg in Resources */,
 				1D3170FE2339E3C300267B46 /* albam5.jpg in Resources */,
+				1DDD9BE62348A20E00154ECC /* RadioCell.xib in Resources */,
 				1D3171012339E3C300267B46 /* albam7.jpg in Resources */,
 				1D073459230951400086E570 /* GoogleService-Info.plist in Resources */,
 				1D49304C22F899C300EAB70F /* Assets.xcassets in Resources */,
@@ -527,6 +534,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D3BFEC723388DB1006371F7 /* MP3Data.swift in Sources */,
+				1DDD9BE52348A20E00154ECC /* RadioCell.swift in Sources */,
 				1DA617E3232A6D85002C6B50 /* WeatherViewController.swift in Sources */,
 				1D49307722F8A41900EAB70F /* CreateAccountViewController.swift in Sources */,
 				1D94E37E233D1DCF00FC644A /* UpComingCell.swift in Sources */,

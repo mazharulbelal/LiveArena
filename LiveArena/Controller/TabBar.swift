@@ -44,7 +44,7 @@ class TabBar: UITabBarController {
         
         
         
-        let thirdVc = MP3TableViewController()
+        let thirdVc = RadioController()
             thirdVc.title = "Radio"
             thirdVc.tabBarItem = UITabBarItem.init(title: "Radio", image: UIImage(named: "Radio"), tag: 2)
         

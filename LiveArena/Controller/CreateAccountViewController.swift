@@ -178,9 +178,9 @@ class CreateAccountViewController: UIViewController {
             if user != nil {
                 
                 var UserInformation : [String: Any] = [:]
-                    UserInformation["name"] = ["Mazharul"]
-                    UserInformation["email"] = ["mazharul.belal@gmail.com"]
-                    UserInformation["phone"] = ["01711736369"]
+                UserInformation["name"] = [self.FullName.text!]
+                    UserInformation["email"] = [email]
+                UserInformation["phone"] = [self.PhoneTextFleld.text!]
                 
                 
                 Firestore.firestore().collection("UserInformation").addDocument(data: UserInformation)
