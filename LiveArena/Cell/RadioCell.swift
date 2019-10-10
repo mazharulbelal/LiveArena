@@ -23,6 +23,14 @@ class RadioCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+       RadioImageView.layer.cornerRadius = 5
+       RadioImageView.clipsToBounds = true
+        RadioImageView.layer.borderWidth = 1
+        RadioImageView.layer.borderColor = UIColor.gray.cgColor
+
+        
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

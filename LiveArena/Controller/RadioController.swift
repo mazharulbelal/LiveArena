@@ -1,14 +1,20 @@
 
 
 import UIKit
+import Firebase
 
 class RadioController: UIViewController {
 
     
+    var radioList = [String]()
+    
+    
     let PlayView: UIView = {
         let playView = UIView()
-        playView.backgroundColor = UIColor.white
+        playView.backgroundColor = UIColor(white: 1, alpha: 0.7)
         playView.translatesAutoresizingMaskIntoConstraints = false
+        
+        playView.layer.borderWidth = 0.5
         return playView
         
     }()
@@ -38,9 +44,9 @@ class RadioController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(radioList)
         
-        
-        
+        self.fetchRadioData()
         mTableView.delegate = self
         mTableView.dataSource = self
         
@@ -88,7 +94,7 @@ extension RadioController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 15
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -99,6 +105,31 @@ extension RadioController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 87
+    }
+    
+    func fetchRadioData() {
+        
+        Firestore.firestore().collection("RadioList")
+        
+            .addSnapshotListener{snapshot, error in
+                if let snap = snapshot?.documents {
+                    print("#### Start ####")
+                    for doc in snap {
+                        var Data = doc.data()
+                       
+                    }
+                    
+                    print("#### End ####")
+                }
+                
+        }
+        
+    }
+    
+    
     
 }
 
