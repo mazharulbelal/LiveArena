@@ -116,13 +116,13 @@ extension RadioController: UITableViewDelegate, UITableViewDataSource {
         
             .addSnapshotListener{snapshot, error in
                 if let snap = snapshot?.documents {
-                    print("#### Start ####")
+                    print("#### Start Point ####")
                     for doc in snap {
                         var Data = doc.data()
                        
                     }
                     
-                    print("#### End ####")
+                    print("#### End Point ####")
                 }
                 
         }
