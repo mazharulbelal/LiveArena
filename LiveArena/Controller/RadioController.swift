@@ -119,7 +119,10 @@ extension RadioController: UITableViewDelegate, UITableViewDataSource {
                     print("#### Start Point ####")
                     for doc in snap {
                         var Data = doc.data()
-                       
+                     
+                        
+                        
+                        print ("Start")
                     }
                     
                     print("#### End Point ####")
