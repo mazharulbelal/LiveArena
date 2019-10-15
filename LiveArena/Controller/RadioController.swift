@@ -43,9 +43,23 @@ class RadioController: UIViewController {
         let image2 = UIImage(named: "Play") as UIImage?
         let PlayButton = UIButton(type:  UIButton.ButtonType.custom) as UIButton
         PlayButton.setImage(image2, for: .normal)
-        PlayButton.addControlEvent(.touchUpInside, {
+        PlayButton.addTarget(self, action: #selector(OnPlayButtonClicked), for: .touchUpInside)
+        
             
-            })
+          
+         
+            
+            
+        
+    
+        
+        
+        
+        
+            
+            
+            
+        
         
         let image3 = UIImage(named: "Next") as UIImage?
         let BackButton = UIButton(type: UIButton.ButtonType.custom) as UIButton
@@ -63,7 +77,19 @@ class RadioController: UIViewController {
     } ()
     
     
+    var isChecked = true
     
+    @objc func OnPlayButtonClicked(sender: UIButton) {
+        let Play = UIImage(named: "Play") as UIImage?
+        let Pause = UIImage(named: "Pause") as UIImage?
+        isChecked = !isChecked
+        if isChecked {
+            sender.setImage(Play, for: .normal)
+        } else {
+            sender.setImage(Pause, for: .normal)
+        }
+    }
+
     
     
     
