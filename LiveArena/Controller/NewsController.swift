@@ -1,14 +1,8 @@
-//
-//  MP3TableViewController.swift
-//  LiveArena
-//
-//  Created by Mazharul Belal on 7/8/19.
-//  Copyright © 2019 Mazharul Belal. All rights reserved.
-//
+
 
 import UIKit
 
-class MP3TableViewController: UIViewController {
+class NewsController: UIViewController {
     
     
     var mp3Data: [MP3Category] = []
@@ -49,36 +43,36 @@ class MP3TableViewController: UIViewController {
         view.addSubview(mCollectionView)
         
         
-        let cellNib = UINib(nibName: MP3CollectionCell.name, bundle: nil)
-        self.mCollectionView.register(cellNib, forCellWithReuseIdentifier: MP3CollectionCell.name)
+        let cellNib = UINib(nibName: NewsCollectionCell.name, bundle: nil)
+        self.mCollectionView.register(cellNib, forCellWithReuseIdentifier: NewsCollectionCell.name)
         
         
         
-        let HeaderNib = UINib(nibName: "HeaderView", bundle: nil)
-        self.mCollectionView.register(HeaderNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderView")
+        let HeaderNib = UINib(nibName: NewsHeaderView.name, bundle: nil)
+        self.mCollectionView.register(HeaderNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: NewsHeaderView.name)
         
         
         
-        let HoldNib = UINib(nibName: UpComingCell.name, bundle: nil)
-        self.mCollectionView.register(HoldNib, forCellWithReuseIdentifier: UpComingCell.name)
+        let HoldNib = UINib(nibName: RecentNewsCell.name, bundle: nil)
+        self.mCollectionView.register(HoldNib, forCellWithReuseIdentifier: RecentNewsCell.name)
         
     }
     
     
     
     func getCellSize () -> CGSize {
-    let vw = CGFloat(self.view.frame.width)
-    let margins: CGFloat = 10.0 + 10.0
-    let gapBetweenItems: CGFloat = 0.0
-    let width: CGFloat = vw - margins - gapBetweenItems
-    let numberOfItemsPerRow: CGFloat = 3.00
-    return CGSize(width: (width/numberOfItemsPerRow) - 6.8, height: 240.0)
+        let vw = CGFloat(self.view.frame.width)
+        let margins: CGFloat = 10.0 + 10.0
+        let gapBetweenItems: CGFloat = 0.0
+        let width: CGFloat = vw - margins - gapBetweenItems
+        let numberOfItemsPerRow: CGFloat = 1.00
+        return CGSize(width: (width/numberOfItemsPerRow) - 6.8, height: 150.0)
     }
-
-
+    
+    
 }
 
-extension MP3TableViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension NewsController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     
     
@@ -86,7 +80,7 @@ extension MP3TableViewController : UICollectionViewDelegate, UICollectionViewDat
         return 3
     }
     
-   
+    
     
     
     
@@ -96,9 +90,9 @@ extension MP3TableViewController : UICollectionViewDelegate, UICollectionViewDat
         if section == 0 {
             return 1
         }
-        
+            
         else if section == 1{
-          return  mp3RecentData.count
+            return  mp3RecentData.count
             
         }
         
@@ -112,21 +106,21 @@ extension MP3TableViewController : UICollectionViewDelegate, UICollectionViewDat
         
         
         
-        if let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderView", for: indexPath) as? HeaderView {
+        if let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: NewsHeaderView.name, for: indexPath) as? NewsHeaderView {
             
             if indexPath.section == 0 {
-                header.HearTitleLabel.text = "Upcoming Music"
+                header.HearTitleLabel.text = "Top News"
                 
             }
-            
-            
-           else if indexPath.section == 1 {
-                header.HearTitleLabel.text = "Favorite Music"
+                
+                
+            else if indexPath.section == 1 {
+                header.HearTitleLabel.text = "Recent News"
                 
             }
-            
+                
             else {
-                header.HearTitleLabel.text = "All Music"
+                header.HearTitleLabel.text = "All News"
             }
             
             return header
@@ -142,7 +136,7 @@ extension MP3TableViewController : UICollectionViewDelegate, UICollectionViewDat
         
         return CGSize(width: collectionView.frame.size.width, height: 40.0)
     }
-  
+    
     
     
     
@@ -163,7 +157,7 @@ extension MP3TableViewController : UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.section == 0 {
             
-    
+            
             
             return CGSize(width: collectionView.frame.width, height: 210)
         }
@@ -183,19 +177,19 @@ extension MP3TableViewController : UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MP3CollectionCell.name, for: indexPath) as! MP3CollectionCell
-        let Upcoming = collectionView.dequeueReusableCell(withReuseIdentifier: UpComingCell.name, for: indexPath) as! UpComingCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NewsCollectionCell.name, for: indexPath) as! NewsCollectionCell
+        let Upcoming = collectionView.dequeueReusableCell(withReuseIdentifier: RecentNewsCell.name, for: indexPath) as! RecentNewsCell
         
         if indexPath.section == 0 {
             
             
             
-           return Upcoming
+            return Upcoming
             
         }
-       
-        
-        
+            
+            
+            
         else if indexPath.section == 1 {
             let mp3RecentData = self.mp3RecentData[indexPath.row]
             cell.SongTIitlelabel.text = mp3RecentData.SongTitleData
@@ -204,14 +198,15 @@ extension MP3TableViewController : UICollectionViewDelegate, UICollectionViewDat
             return cell
         }
         else {
-         let mp3data = self.mp3Data[indexPath.row]
-        cell.SongTIitlelabel.text = mp3data.SongTitleData
-        cell.PRofileImageView.image = UIImage(named: mp3data.SongImageData)
+            let mp3data = self.mp3Data[indexPath.row]
+            cell.SongTIitlelabel.text = mp3data.SongTitleData
+            cell.PRofileImageView.image = UIImage(named: mp3data.SongImageData)
             
             return cell
         }
         
-   
+        
         
     }
 }
+

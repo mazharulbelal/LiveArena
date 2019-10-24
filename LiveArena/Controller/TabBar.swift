@@ -11,7 +11,7 @@ import UIKit
 class TabBar: UITabBarController {
     
     let First = WeatherViewController()
-    let Secound = MP3TableViewController()
+    let Secound = MP3Controller()
     let Third = RadioController()
     
     
@@ -37,7 +37,7 @@ class TabBar: UITabBarController {
         
         
         
-        let secondVc = MP3TableViewController()
+        let secondVc = MP3Controller()
             secondVc.title = "MP3 Player"
             secondVc.tabBarItem = UITabBarItem.init(title: "MP3", image: UIImage(named: "MP3"), tag: 1)
         
@@ -49,7 +49,7 @@ class TabBar: UITabBarController {
             thirdVc.tabBarItem = UITabBarItem.init(title: "Radio", image: UIImage(named: "Radio"), tag: 2)
         
         
-        let FourdVc = SideMenu()
+        let FourdVc = NewsController()
         FourdVc.title = "News"
         FourdVc.tabBarItem = UITabBarItem.init(title: "News", image: UIImage(named: "newspaper"), tag: 3)
         

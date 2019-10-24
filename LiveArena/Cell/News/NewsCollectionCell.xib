@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewsCollectionCell" id="vCH-vk-Kc6" customClass="NewsCollectionCell" customModule="LiveArena" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="350" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tGQ-2p-WKu">
+                        <rect key="frame" x="5" y="5" width="340" height="140"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cja-lz-QIK">
+                                <rect key="frame" x="10" y="10" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="BxW-B2-oPZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="752" text="The World is mine" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQn-zp-ma6">
+                                <rect key="frame" x="140" y="10" width="190" height="120"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NQn-zp-ma6" firstAttribute="top" secondItem="tGQ-2p-WKu" secondAttribute="top" constant="10" id="21Q-HI-bc0"/>
+                            <constraint firstItem="NQn-zp-ma6" firstAttribute="top" secondItem="tGQ-2p-WKu" secondAttribute="top" constant="10" id="2Tb-fR-s4Q"/>
+                            <constraint firstItem="cja-lz-QIK" firstAttribute="leading" secondItem="tGQ-2p-WKu" secondAttribute="leading" constant="10" id="2bI-gM-AyV"/>
+                            <constraint firstAttribute="bottom" secondItem="NQn-zp-ma6" secondAttribute="bottom" constant="10" id="NUU-RB-BW4"/>
+                            <constraint firstAttribute="bottom" secondItem="NQn-zp-ma6" secondAttribute="bottom" constant="10" id="VJb-vE-AwC"/>
+                            <constraint firstAttribute="trailing" secondItem="NQn-zp-ma6" secondAttribute="trailing" constant="10" id="dxQ-o9-jNq"/>
+                            <constraint firstItem="NQn-zp-ma6" firstAttribute="leading" secondItem="cja-lz-QIK" secondAttribute="trailing" constant="10" id="kHJ-Ba-4ry"/>
+                            <constraint firstItem="cja-lz-QIK" firstAttribute="top" secondItem="tGQ-2p-WKu" secondAttribute="top" constant="10" id="kiA-hc-JQc"/>
+                            <constraint firstAttribute="trailing" secondItem="NQn-zp-ma6" secondAttribute="trailing" constant="10" id="mg3-W9-0ul"/>
+                            <constraint firstAttribute="bottom" secondItem="cja-lz-QIK" secondAttribute="bottom" constant="10" id="nhv-PO-fcZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="tGQ-2p-WKu" firstAttribute="leading" secondItem="vCH-vk-Kc6" secondAttribute="leading" constant="5" id="WUF-Ct-0j8"/>
+                <constraint firstItem="tGQ-2p-WKu" firstAttribute="top" secondItem="vCH-vk-Kc6" secondAttribute="top" constant="5" id="iFX-zu-f6Z"/>
+                <constraint firstItem="tGQ-2p-WKu" firstAttribute="centerX" secondItem="vCH-vk-Kc6" secondAttribute="centerX" id="qg7-U0-QhZ"/>
+                <constraint firstItem="tGQ-2p-WKu" firstAttribute="centerY" secondItem="vCH-vk-Kc6" secondAttribute="centerY" id="yZL-16-HvI"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="mfp-JT-Ic7"/>
+            <size key="customSize" width="336" height="133"/>
+            <connections>
+                <outlet property="PRofileImageView" destination="cja-lz-QIK" id="BeV-Qf-Vjt"/>
+                <outlet property="SongTIitlelabel" destination="NQn-zp-ma6" id="fG0-SC-Uth"/>
+                <outlet property="containerView" destination="tGQ-2p-WKu" id="V8H-3s-RdB"/>
+            </connections>
+            <point key="canvasLocation" x="-16" y="-51.27436281859071"/>
+        </collectionViewCell>
+    </objects>
+</document>
